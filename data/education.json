@@ -1,0 +1,155 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor of Computer Science and Technology",
+      "institution": "Nanjing University of Posts and Telecommunications",
+      "location": "Nanjing, China",
+      "period": "2022 - 2026",
+      "status": "In Progress",
+      "gpa": "3.8/4.0",
+      "description": "Pursuing Computer Science and Technology with specialization in Software Engineering and Artificial Intelligence. As an international student from Bangladesh, I am gaining comprehensive knowledge in modern programming languages, frameworks, and cutting-edge technologies.",
+      "achievements": [
+        "Dean's List for 3 consecutive semesters",
+        "Outstanding International Student Award 2023",
+        "Winner of University Programming Contest 2023",
+        "Active member of AI Research Club",
+        "Lead developer in senior capstone project on Machine Learning applications"
+      ],
+      "relevantCourses": [
+        "Data Structures and Algorithms",
+        "Machine Learning and Deep Learning",
+        "Advanced Software Engineering",
+        "Database Systems and Big Data",
+        "Computer Networks and Security",
+        "Web Development and Mobile Computing",
+        "Artificial Intelligence Fundamentals",
+        "Cloud Computing and Distributed Systems"
+      ],
+      "projects": [
+        {
+          "name": "AI-Powered Student Management System",
+          "description": "Developed a comprehensive system using React and Node.js with ML-based grade prediction and performance analytics"
+        },
+        {
+          "name": "Cross-Cultural Communication Platform",
+          "description": "Built a web application to help international students connect and share experiences, featuring real-time chat and cultural exchange forums"
+        },
+        {
+          "name": "Smart Campus Navigation System",
+          "description": "Created an intelligent campus navigation app using machine learning for optimal route planning and location services"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Higher Secondary Certificate",
+      "institution": "Premier College",
+      "location": "Bangladesh",
+      "period": "2020 - 2022",
+      "status": "Completed",
+      "gpa": "5.0/5.0",
+      "description": "Science Group with specialization in Mathematics, Physics, and Chemistry. Graduated with highest honors and developed strong foundation in analytical thinking.",
+      "achievements": [
+        "Graduated with Perfect GPA (5.0/5.0)",
+        "National Merit Scholarship Recipient",
+        "Math Olympiad Regional Champion",
+        "Science Fair First Place Winner"
+      ],
+      "relevantCourses": [
+        "Advanced Mathematics",
+        "Physics",
+        "Chemistry",
+        "Computer Science Fundamentals",
+        "Statistics",
+        "English Literature"
+      ],
+      "projects": [
+        {
+          "name": "Solar Energy Calculator",
+          "description": "Built a web application to calculate solar panel efficiency for different locations"
+        },
+        {
+          "name": "Chemistry Lab Simulator",
+          "description": "Created an interactive virtual chemistry lab using JavaScript"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "degree": "Secondary School Certificate",
+      "institution": "Model High School",
+      "location": "Bangladesh", 
+      "period": "2018 - 2020",
+      "status": "Completed",
+      "gpa": "5.0/5.0",
+      "description": "Science background with excellent performance in mathematics and computer studies. Built foundation for future technology career.",
+      "achievements": [
+        "Perfect GPA (5.0/5.0)",
+        "Student of the Year Award",
+        "Computer Programming Club President",
+        "Inter-school Debate Competition Winner"
+      ],
+      "relevantCourses": [
+        "Mathematics",
+        "General Science",
+        "Computer Studies",
+        "English",
+        "Social Science",
+        "Art and Crafts"
+      ],
+      "projects": [
+        {
+          "name": "School Website",
+          "description": "Designed and developed the official school website using HTML, CSS, and JavaScript"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2024",
+      "credentialId": "AWS-CCP-2024-001",
+      "skills": ["Cloud Computing", "AWS Services", "Security"]
+    },
+    {
+      "name": "Google Analytics Certified",
+      "issuer": "Google",
+      "date": "2024",
+      "credentialId": "GA-CERT-2024-002",
+      "skills": ["Web Analytics", "Data Analysis", "Digital Marketing"]
+    },
+    {
+      "name": "MongoDB Developer Certification",
+      "issuer": "MongoDB University",
+      "date": "2023",
+      "credentialId": "MDB-DEV-2023-003",
+      "skills": ["NoSQL", "Database Design", "MongoDB"]
+    }
+  ],
+  "onlineCourses": [
+    {
+      "name": "Complete React Developer Course",
+      "platform": "Udemy",
+      "completion": "2024",
+      "hours": "40 hours",
+      "skills": ["React", "Redux", "JavaScript ES6+"]
+    },
+    {
+      "name": "Machine Learning Specialization",
+      "platform": "Coursera (Stanford)",
+      "completion": "2023",
+      "hours": "60 hours", 
+      "skills": ["Python", "TensorFlow", "Neural Networks"]
+    },
+    {
+      "name": "Full Stack Web Development",
+      "platform": "FreeCodeCamp",
+      "completion": "2023",
+      "hours": "300 hours",
+      "skills": ["HTML5", "CSS3", "JavaScript", "Node.js"]
+    }
+  ]
+}
