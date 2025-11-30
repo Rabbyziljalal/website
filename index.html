@@ -9172,10 +9172,8 @@
     }
 
     function showQRCode() {
-      // Get the full URL for the resume PDF
-      const currentUrl = window.location.href;
-      const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/') + 1);
-      const resumeUrl = baseUrl + 'resources/resume.pdf';
+      // Use the full GitHub Pages URL for the resume PDF
+      const resumeUrl = 'https://rabbyziljalal.github.io/website/resources/resume.pdf';
       
       const qrContainer = document.getElementById('qr-code-container');
       const qrUrl = generateQRCode(resumeUrl, 200);
