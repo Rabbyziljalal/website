@@ -6,13 +6,6 @@
   <title>Rabby Zil Jalal Kanon | Portfolio</title>
   <!-- EmailJS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS
-    (function(){
-      emailjs.init("wVcCzimVtop2kXVNn");
-      window.emailjsConfigured = true;
-    })();
-  </script>
   
   <style>
     :root {
@@ -9562,6 +9555,17 @@ This message was sent from your portfolio contact form.`;
         });
       });
     }
+
+    // Initialize EmailJS
+    (function(){
+      if (typeof emailjs !== 'undefined') {
+        emailjs.init("wVcCzimVtop2kXVNn");
+        window.emailjsConfigured = true;
+        console.log('EmailJS initialized successfully');
+      } else {
+        console.error('EmailJS library not loaded');
+      }
+    })();
 
     // Initialize contact form when page loads
     document.addEventListener('DOMContentLoaded', function() {
