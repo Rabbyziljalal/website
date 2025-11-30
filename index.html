@@ -6,6 +6,13 @@
   <title>Rabby Zil Jalal Kanon | Portfolio</title>
   <!-- EmailJS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your public key
+    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key from https://dashboard.emailjs.com/admin/account
+    (function(){
+      // emailjs.init("YOUR_PUBLIC_KEY"); // Uncomment and add your key here
+    })();
+  </script>
   
   <style>
     :root {
@@ -8612,8 +8619,8 @@
   </section>
 
   <!-- About Section -->
-  <section class="about reveal" id="about">
-    <h2 data-translate="about">About Me</h2>
+  <section class="about reveal" id="about Me">
+    <h2 data-translate="about Me">About Me</h2>
     <p>
       Hello! I'm Rabby Zil Jalal Kanon, a passionate Computer Science and Technology student from Bangladesh, currently pursuing my studies at Nanjing University of Posts and Telecommunications in China. I love creating innovative web applications and exploring the fascinating world of artificial intelligence and machine learning.
     </p>
@@ -12487,6 +12494,42 @@ This message was sent from your portfolio contact form.`;
       btnLoading.style.display = 'block';
       submitBtn.disabled = true;
       
+      // Check if EmailJS is configured
+      if (typeof emailjs !== 'undefined' && window.emailjsConfigured) {
+        // Try to send via EmailJS
+        const templateParams = {
+          from_name: name,
+          from_email: email,
+          subject: subject,
+          message: message,
+          to_email: 'rabbyzilzalal@gmail.com'
+        };
+        
+        // Replace with your EmailJS service ID, template ID, and public key
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+          .then(() => {
+            // Success
+            document.getElementById('contactForm').reset();
+            alert('✅ Message sent successfully! I will get back to you soon.');
+            
+            // Reset button
+            btnText.style.display = 'block';
+            btnLoading.style.display = 'none';
+            submitBtn.disabled = false;
+          })
+          .catch((error) => {
+            console.error('EmailJS Error:', error);
+            // Fallback to mailto
+            openMailtoFallback(name, email, subject, message, submitBtn, btnText, btnLoading);
+          });
+      } else {
+        // EmailJS not configured, use mailto fallback
+        console.log('EmailJS not configured. Using mailto fallback.');
+        openMailtoFallback(name, email, subject, message, submitBtn, btnText, btnLoading);
+      }
+    }
+    
+    function openMailtoFallback(name, email, subject, message, submitBtn, btnText, btnLoading) {
       // Create email content
       const emailSubject = `Portfolio Contact: ${subject}`;
       const emailBody = `Hi Rabby,
@@ -12510,13 +12553,13 @@ This message was sent from your portfolio contact form.`;
       
       // Small delay for user feedback, then open email client
       setTimeout(() => {
-        window.open(mailtoLink, '_blank');
+        window.location.href = mailtoLink;
         
         // Reset form
         document.getElementById('contactForm').reset();
         
         // Show success message
-        alert('✅ Email client opened! Please send the message from your email app to complete the process.');
+        alert('✅ Opening your email client. Please send the message to complete the process.\n\nTo enable direct sending, configure EmailJS in the code.');
         
         // Reset button
         btnText.style.display = 'block';
