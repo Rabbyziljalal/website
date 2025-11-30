@@ -12674,6 +12674,12 @@ This message was sent from your portfolio contact form.`;
       const savedImage = localStorage.getItem('profileImage');
       if (savedImage) {
         showProfileImage(savedImage);
+      } else if (profileImage.src && profileImage.src.includes('jalal.jpg')) {
+        // Show the default jalal.jpg image
+        profileImage.classList.add('loaded');
+        imagePlaceholder.classList.add('hidden');
+        imageOverlay.style.display = 'flex';
+        uploadBtn.style.display = 'none';
       } else {
         showPlaceholder();
       }
