@@ -8634,7 +8634,7 @@
     <div class="cv-download-section">
       <h3>Download My Resume</h3>
       <div class="cv-buttons">
-        <a href="assets/resume.pdf" class="cv-btn" download id="download-pdf">
+        <a href="resources/resume.pdf" class="cv-btn" download="Rabby_Zil_Jalal_Kanon_Resume.pdf" id="download-pdf">
           <span>📄</span>
           <span>Download PDF</span>
         </a>
@@ -8645,7 +8645,6 @@
       </div>
     </div>
     
-    <a href="resources/resume.pdf" class="btn" download>Download Resume</a>
   </section>
 
   <!-- Skills Section -->
@@ -9173,19 +9172,15 @@
     }
 
     function showQRCode() {
-      const contactInfo = `BEGIN:VCARD
-VERSION:3.0
-FN:Rabby Zil Jalal Kanon
-ORG:Computer Science Student
-EMAIL:rabby@example.com
-TEL:+1234567890
-URL:https://rabby.portfolio.com
-END:VCARD`;
+      // Get the full URL for the resume PDF
+      const currentUrl = window.location.href;
+      const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/') + 1);
+      const resumeUrl = baseUrl + 'resources/resume.pdf';
       
       const qrContainer = document.getElementById('qr-code-container');
-      const qrUrl = generateQRCode(contactInfo, 200);
+      const qrUrl = generateQRCode(resumeUrl, 200);
       
-      qrContainer.innerHTML = `<img src="${qrUrl}" alt="Contact QR Code" style="max-width: 100%; height: auto;">`;
+      qrContainer.innerHTML = `<img src="${qrUrl}" alt="Resume Download QR Code" style="max-width: 100%; height: auto;">`;
       
       document.getElementById('qr-modal').classList.add('show');
       soundManager.playClick();
