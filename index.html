@@ -852,15 +852,217 @@
       transition: all 0.3s ease;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
+      gap: 3rem;
     }
 
     .hero-text {
       flex: 1;
     }
 
-    /* Profile picture styles removed */
+    .hero-image {
+      flex: 0 0 300px;
+    }
+
+    .profile-container {
+      text-align: center;
+    }
+
+    .profile-image-wrapper {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--accent-color);
+      box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
+      transition: all 0.3s ease;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    }
+
+    .profile-image-wrapper:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(99, 102, 241, 0.4);
+    }
+
+    .profile-image-wrapper:hover .image-overlay {
+      opacity: 1;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: all 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .overlay-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .overlay-btn {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .overlay-btn:hover {
+      transform: scale(1.1);
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .change-btn:hover {
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+
+    .remove-btn:hover {
+      background: #ffebee;
+      color: #d32f2f;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .profile-image.loaded {
+      display: block;
+    }
+
+    .image-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .image-placeholder.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .placeholder-content {
+      text-align: center;
+      color: var(--text-color);
+    }
+
+    .placeholder-icon {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+
+    .placeholder-content p {
+      margin: 0.5rem 0;
+      font-weight: 500;
+    }
+
+    .placeholder-content small {
+      opacity: 0.7;
+      font-size: 0.8rem;
+    }
+
+    .upload-btn {
+      background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
+      border: none;
+      border-radius: 25px;
+      padding: 12px 24px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+    }
+
+    .upload-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+      background: linear-gradient(135deg, #5855ff, #7c3aed);
+    }
+
+    .upload-btn:active {
+      transform: translateY(0);
+    }
+
+    .profile-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .change-btn-main, .remove-btn-main {
+      background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+      min-width: 140px;
+    }
+
+    .change-btn-main {
+      background: linear-gradient(135deg, #1976d2, #42a5f5);
+      box-shadow: 0 4px 16px rgba(25, 118, 210, 0.3);
+    }
+
+    .remove-btn-main {
+      background: linear-gradient(135deg, #d32f2f, #f44336);
+      box-shadow: 0 4px 16px rgba(211, 47, 47, 0.3);
+    }
+
+    .change-btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+      background: linear-gradient(135deg, #1565c0, #2196f3);
+    }
+
+    .remove-btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+      background: linear-gradient(135deg, #c62828, #e53935);
+    }
+
+    .change-btn-main:active, .remove-btn-main:active {
+      transform: translateY(0);
+    }
 
     /* Admin Control Panel Styles */
     .admin-panel {
@@ -8383,6 +8585,36 @@
   <section class="hero" id="home">
     <div class="particles-container" id="particles-container"></div>
     <div class="hero-content">
+      <div class="hero-image">
+        <div class="profile-container">
+          <div class="profile-image-wrapper">
+            <img src="resources/image/jalal.jpg" alt="Rabby Zil Jalal Kanon - Profile Picture" class="profile-image loaded" id="profileImage">
+            <div class="image-placeholder hidden" id="imagePlaceholder">
+              <div class="placeholder-content">
+                <span class="placeholder-icon">👤</span>
+                <p>Click to add your<br>profile picture</p>
+                <small>Recommended: 400x400px</small>
+              </div>
+            </div>
+            <div class="image-overlay" id="imageOverlay">
+              <div class="overlay-buttons">
+                <button class="overlay-btn change-btn" onclick="requireAdminAuth(() => document.getElementById('imageUpload').click(), 'change profile picture')" title="Change Picture">
+                  🔄
+                </button>
+                <button class="overlay-btn remove-btn" onclick="removeProfilePicture()" title="Remove Picture">
+                  🗑️
+                </button>
+              </div>
+            </div>
+          </div>
+          <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+          <div class="profile-buttons">
+            <button class="upload-btn" id="uploadBtn" onclick="requireAdminAuth(() => document.getElementById('imageUpload').click(), 'add profile picture')">
+              📷 Add Photo
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="hero-text">
         <h1>Hello, I'm Rabby Zil Jalal Kanon</h1>
         <div class="typing-container">
@@ -12429,8 +12661,124 @@ This message was sent from your portfolio contact form.`;
         extendAdminSession();
       }
     }
-    // Profile picture functions removed
-    
+    function initProfilePicture() {
+      const imageUpload = document.getElementById('imageUpload');
+      const profileImage = document.getElementById('profileImage');
+      const imagePlaceholder = document.getElementById('imagePlaceholder');
+      const imageOverlay = document.getElementById('imageOverlay');
+      const uploadBtn = document.getElementById('uploadBtn');
+      const changeBtn = document.getElementById('changeBtn');
+      const removeBtn = document.getElementById('removeBtn');
+      
+      // Check if there's a saved image in localStorage
+      const savedImage = localStorage.getItem('profileImage');
+      if (savedImage) {
+        showProfileImage(savedImage);
+      } else if (profileImage.src && profileImage.src.includes('jalal.jpg')) {
+        // Show the default jalal.jpg image
+        profileImage.classList.add('loaded');
+        imagePlaceholder.classList.add('hidden');
+        imageOverlay.style.display = 'flex';
+        uploadBtn.style.display = 'none';
+      } else {
+        showPlaceholder();
+      }
+      
+      // Handle image upload
+      imageUpload.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+          // Validate file type
+          if (!file.type.startsWith('image/')) {
+            alert('❌ Please select a valid image file.');
+            return;
+          }
+          
+          // Validate file size (max 5MB)
+          if (file.size > 5 * 1024 * 1024) {
+            alert('❌ Image size should be less than 5MB.');
+            return;
+          }
+          
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const imageData = e.target.result;
+            
+            // Display the image
+            showProfileImage(imageData);
+            
+            // Save to localStorage for persistence
+            localStorage.setItem('profileImage', imageData);
+            
+            // Show success message
+            alert('✅ Profile picture updated successfully!');
+            if (typeof extendAdminSession === 'function') extendAdminSession();
+          };
+          
+          reader.readAsDataURL(file);
+        }
+        
+        // Reset the input so the same file can be selected again
+        event.target.value = '';
+      });
+      
+      // Handle image load error
+      profileImage.addEventListener('error', function() {
+        console.log('Failed to load profile image');
+        showPlaceholder();
+        localStorage.removeItem('profileImage');
+      });
+      
+      function showProfileImage(imageData) {
+        profileImage.src = imageData;
+        profileImage.classList.add('loaded');
+        imagePlaceholder.classList.add('hidden');
+        imageOverlay.style.display = 'flex';
+        uploadBtn.style.display = 'none';
+        changeBtn.style.display = 'block';
+        removeBtn.style.display = 'block';
+      }
+      
+      function showPlaceholder() {
+        profileImage.style.display = 'none';
+        profileImage.classList.remove('loaded');
+        imagePlaceholder.style.display = 'flex';
+        imagePlaceholder.classList.remove('hidden');
+        imageOverlay.style.display = 'none';
+        uploadBtn.style.display = 'block';
+        changeBtn.style.display = 'none';
+        removeBtn.style.display = 'none';
+      }
+    }
+
+    // Protected Remove profile picture function
+    function removeProfilePicture() {
+      requireAdminAuth(() => {
+        if (confirm('🗑️ Are you sure you want to remove your profile picture?')) {
+          const profileImage = document.getElementById('profileImage');
+          const imagePlaceholder = document.getElementById('imagePlaceholder');
+          const imageOverlay = document.getElementById('imageOverlay');
+          const uploadBtn = document.getElementById('uploadBtn');
+          const changeBtn = document.getElementById('changeBtn');
+          const removeBtn = document.getElementById('removeBtn');
+          
+          // Remove image and show placeholder
+          profileImage.classList.remove('loaded');
+          imagePlaceholder.classList.remove('hidden');
+          imageOverlay.style.display = 'none';
+          uploadBtn.style.display = 'block';
+          changeBtn.style.display = 'none';
+          removeBtn.style.display = 'none';
+          
+          // Remove from localStorage
+          localStorage.removeItem('profileImage');
+          
+          // Show success message
+          alert('✅ Profile picture removed successfully!');
+        }
+      }, 'remove profile picture');
+    }
+
     // Admin Control Panel Functions
     function toggleAdminPanel() {
       const adminContent = document.getElementById('adminContent');
@@ -12474,8 +12822,9 @@ This message was sent from your portfolio contact form.`;
       updateAdminStatus();
     };
 
-    // Profile picture initialization removed
+    // Initialize profile picture functionality when page loads
     document.addEventListener('DOMContentLoaded', function() {
+      initProfilePicture();
       updateAdminStatus();
     });
 
@@ -14321,6 +14670,7 @@ startxref
       initBlogInterface();
       initTestimonialsInterface();
       initHamburgerMenu();
+      initProfilePicture();
       updateAdminStatus();
       
       // Load saved education data
