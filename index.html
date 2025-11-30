@@ -8503,166 +8503,10 @@
 </head>
 <body>
 
-  <!-- Gorgeous CAPTCHA Interface -->
-  <div id="captcha-screen" class="captcha-screen active">
-    <div class="captcha-background">
-      <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-        <div class="shape shape-5"></div>
-      </div>
-    </div>
-    
-    <div class="captcha-container">
-      <div class="captcha-header">
-        <h1 class="captcha-title">Welcome to Rabby's Portfolio</h1>
-        <p class="captcha-subtitle">Please verify you're human to continue</p>
-      </div>
-      
-      <div class="captcha-card">
-        <div class="captcha-challenge">
-          <div class="captcha-image-container">
-            <canvas id="captcha-canvas" width="200" height="60"></canvas>
-            <button class="captcha-refresh" id="captcha-refresh" title="Generate new CAPTCHA">
-              <i class="fas fa-sync-alt"></i>
-            </button>
-            <div class="captcha-refresh-text">
-              <small>Can't read? <span class="refresh-link" id="refresh-link">Click to refresh</span></small>
-            </div>
-          </div>
-          
-          <div class="captcha-input-container">
-            <input type="text" id="captcha-input" class="captcha-input" placeholder="Enter the code above" autocomplete="off">
-            <div class="input-underline"></div>
-          </div>
-          
-          <button class="captcha-submit" id="captcha-submit">
-            <span class="submit-text">Verify & Continue</span>
-            <span class="submit-loader"></span>
-          </button>
-          
-          <div class="captcha-error" id="captcha-error">
-            Incorrect code. Please try again.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Loading Screen -->
-  <div id="loading-screen" class="loading-screen">
-    <div class="loading-background">
-      <div class="loading-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </div>
-      
-      <!-- Enhanced 3D Floating Elements -->
-      <div class="floating-3d-elements">
-        <div class="floating-cube floating-cube-1"></div>
-        <div class="floating-cube floating-cube-2"></div>
-        <div class="floating-cube floating-cube-3"></div>
-        <div class="floating-cube floating-cube-4"></div>
-        <div class="floating-cube floating-cube-5"></div>
-        <div class="floating-sphere floating-sphere-1"></div>
-        <div class="floating-sphere floating-sphere-2"></div>
-        <div class="floating-sphere floating-sphere-3"></div>
-        <div class="floating-sphere floating-sphere-4"></div>
-        <div class="floating-ring floating-ring-1"></div>
-        <div class="floating-ring floating-ring-2"></div>
-        <div class="floating-ring floating-ring-3"></div>
-        <div class="floating-ring floating-ring-4"></div>
-      </div>
-    </div>
-    
-    <div class="loading-content">
-      <!-- Divine decorative star elements -->
-      <div class="decoration-star-1">✧</div>
-      <div class="decoration-star-2">✦</div>
-      <div class="decoration-star-3">◊</div>
-      <div class="decoration-star-4">✶</div>
-      
-      <div class="loading-welcome">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Preparing an amazing experience for you...</p>
-      </div>
-      
-      <!-- Enhanced Spinning Logo Section with Gauge Animation -->
-      <div class="loading-logo">
-        <div class="corporate-logo-container">
-          <!-- Gauge markers around the logo -->
-          <div class="gauge-markers">
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-            <div class="gauge-marker"></div>
-          </div>
-          
-          <!-- Orbiting elements -->
-          <div class="orbit-elements">
-            <div class="orbit-dot"></div>
-            <div class="orbit-dot"></div>
-            <div class="orbit-dot"></div>
-            <div class="orbit-dot"></div>
-          </div>
-          
-          <!-- Main spinning logo -->
-          <div class="logo-circle">
-            <div class="logo-text">RZ</div>
-          </div>
-        </div>
-      </div>
-      
-      <h2 class="loading-title" data-text="Initializing Portfolio">Initializing Portfolio</h2>
-      
-      <div class="loading-progress-container">
-        <div class="loading-progress-bar">
-          <div class="loading-progress-fill" id="loading-progress-fill"></div>
-        </div>
-        <div class="loading-percentage" id="loading-percentage">0%</div>
-      </div>
-      
-      <div class="loading-status">
-        <div class="loading-status-text" id="loading-status">Getting ready...</div>
-      </div>
-      
-      <div class="loading-steps">
-        <div class="loading-step active" id="step-1">
-          <div class="step-icon">✓</div>
-          <span>Verifying access...</span>
-        </div>
-        <div class="loading-step" id="step-2">
-          <div class="step-icon">⟳</div>
-          <span>Loading components...</span>
-        </div>
-        <div class="loading-step" id="step-3">
-          <div class="step-icon">⟳</div>
-          <span>Preparing content...</span>
-        </div>
-        <div class="loading-step" id="step-4">
-          <div class="step-icon">⟳</div>
-          <span>Almost ready...</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Captcha and Loading Screen removed for direct access -->
 
   <!-- Main Portfolio Content -->
-  <div id="main-content" class="main-content" style="display: none;">
+  <div id="main-content" class="main-content">
   <!-- Header -->
   <header>
     <nav class="navbar">
@@ -10688,49 +10532,16 @@ This message was sent from your portfolio contact form.`;
     `;
     document.head.appendChild(shakeStyle);
 
-    // Initialize CAPTCHA system
-    document.addEventListener('DOMContentLoaded', function() {
-      new CaptchaSystem();
-    });
+    // CAPTCHA system removed - direct access enabled
 
-    // Enhanced Preloader with JavaScript Control
-    window.addEventListener('load', function() {
-      const preloader = document.getElementById('preloader');
+    // Preloader removed - start typing effect immediately
+    document.addEventListener('DOMContentLoaded', function() {
+      const typingElement = document.getElementById('typing-text');
+      const originalText = 'Computer Science Student & Future Engineer';
+      createTypingEffect(typingElement, originalText, 80);
       
-      // Minimum loading time for better UX
-      const minLoadTime = 1000; // 1 second
-      const startTime = Date.now();
-      
-      function hidePreloader() {
-        const elapsed = Date.now() - startTime;
-        const remainingTime = Math.max(0, minLoadTime - elapsed);
-        
-        setTimeout(() => {
-          preloader.style.opacity = '0';
-          preloader.style.pointerEvents = 'none';
-          
-          setTimeout(() => {
-            preloader.style.display = 'none';
-            
-            // Start typing effect after preloader
-            setTimeout(() => {
-              const typingElement = document.getElementById('typing-text');
-              const originalText = 'Computer Science Student & Future Engineer';
-              createTypingEffect(typingElement, originalText, 80);
-              
-              // Trigger entrance animations for visible sections
-              triggerEntranceAnimations();
-            }, 200);
-          }, 500);
-        }, remainingTime);
-      }
-      
-      // Hide preloader when all content is loaded
-      if (document.readyState === 'complete') {
-        hidePreloader();
-      } else {
-        window.addEventListener('load', hidePreloader);
-      }
+      // Trigger entrance animations for visible sections
+      triggerEntranceAnimations();
     });
 
     // Trigger entrance animations for initially visible sections
