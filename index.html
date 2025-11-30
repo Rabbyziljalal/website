@@ -946,7 +946,7 @@
       height: 100%;
       object-fit: cover;
       transition: all 0.3s ease;
-      display: none;
+      display: block;
     }
 
     .profile-image.loaded {
@@ -959,7 +959,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
@@ -12740,7 +12740,9 @@ This message was sent from your portfolio contact form.`;
       }
       
       function showPlaceholder() {
+        profileImage.style.display = 'none';
         profileImage.classList.remove('loaded');
+        imagePlaceholder.style.display = 'flex';
         imagePlaceholder.classList.remove('hidden');
         imageOverlay.style.display = 'none';
         uploadBtn.style.display = 'block';
