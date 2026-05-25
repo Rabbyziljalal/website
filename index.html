@@ -66,81 +66,21 @@
       scrollbar-color: var(--accent) var(--bg-color);
     }
 
-    /* Enhanced Preloader with Better Animation */
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--bg-color), var(--accent));
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
-
-    .loader-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .loader {
-      width: 60px;
-      height: 60px;
-      border: 4px solid var(--shadow);
-      border-top: 4px solid var(--accent);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      position: relative;
-    }
-
-    .loader::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 30px;
-      height: 30px;
-      border: 2px solid var(--accent);
-      border-top: 2px solid transparent;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite reverse;
-    }
-
-    .loading-text {
-      color: var(--text-color);
-      font-size: 1.2rem;
-      font-weight: 600;
-      animation: pulse 1.5s ease-in-out infinite;
-    }
-
-    .loading-progress {
-      width: 200px;
-      height: 4px;
-      background: var(--shadow);
-      border-radius: 2px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .progress-bar-loader {
-      height: 100%;
-      background: var(--accent);
-      width: 0%;
-      border-radius: 2px;
-      animation: loadProgress 3s ease-in-out;
-    }
-
-    @keyframes loadProgress {
-      0% { width: 0%; }
-      50% { width: 70%; }
-      100% { width: 100%; }
+    /* Admin-only controls (hidden for non-admins) */
+    body:not(.admin-auth) .education-edit-controls,
+    body:not(.admin-auth) .education-card-edit-controls,
+    body:not(.admin-auth) .achievement-edit-controls,
+    body:not(.admin-auth) .achievement-stat-edit-controls,
+    body:not(.admin-auth) .achievement-timeline-edit-controls,
+    body:not(.admin-auth) .project-edit-controls,
+    body:not(.admin-auth) .project-stat-edit-controls,
+    body:not(.admin-auth) .testimonial-edit-controls,
+    body:not(.admin-auth) .blog-edit-controls,
+    body:not(.admin-auth) .timeline-edit-controls,
+    body:not(.admin-auth) .image-overlay,
+    body:not(.admin-auth) .profile-buttons,
+    body:not(.admin-auth) .admin-only {
+      display: none !important;
     }
 
     /* Particle Background */
@@ -8886,8 +8826,8 @@
               <strong>Email</strong>
               <p>rabbyzilzalal@gmail.com</p>
               <div class="contact-actions">
-                <button class="edit-btn" onclick="editContact('email', 'rabbyzilzalal@gmail.com')">✏️ Edit</button>
-                <button class="add-btn" onclick="addContact('email')">➕ Add another email</button>
+                <button class="edit-btn admin-only" onclick="editContact('email', 'rabbyzilzalal@gmail.com')">✏️ Edit</button>
+                <button class="add-btn admin-only" onclick="addContact('email')">➕ Add another email</button>
                 <a href="mailto:rabbyzilzalal@gmail.com" class="edit-btn" style="text-decoration: none; display: inline-block;">✉️ Send Email</a>
               </div>
             </div>
@@ -8898,8 +8838,8 @@
               <strong>Phone</strong>
               <p>+86 19708860535</p>
               <div class="contact-actions">
-                <button class="edit-btn" onclick="editContact('phone', '+86 19708860535')">✏️ Edit</button>
-                <button class="add-btn" onclick="addContact('phone')">➕ Add another phone</button>
+                <button class="edit-btn admin-only" onclick="editContact('phone', '+86 19708860535')">✏️ Edit</button>
+                <button class="add-btn admin-only" onclick="addContact('phone')">➕ Add another phone</button>
               </div>
             </div>
           </div>
@@ -9031,17 +8971,6 @@
       <div class="cookie-actions">
         <button class="cookie-btn cookie-accept" id="cookie-accept">Accept All</button>
         <button class="cookie-btn cookie-decline" id="cookie-decline">Decline</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Enhanced Preloader -->
-  <div id="preloader">
-    <div class="loader-container">
-      <div class="loader"></div>
-      <div class="loading-text">Loading Portfolio...</div>
-      <div class="loading-progress">
-        <div class="progress-bar-loader"></div>
       </div>
     </div>
   </div>
@@ -9328,68 +9257,6 @@
           setTimeout(() => modal.remove(), 300);
         }
       }, 8000);
-    }
-
-    // Enhanced Preloader with Progress
-    function initEnhancedPreloader() {
-      const preloader = document.getElementById('preloader');
-      const minLoadTime = 2000; // 2 seconds minimum
-      const startTime = Date.now();
-      
-      // Simulate loading progress
-      const loadingText = document.querySelector('.loading-text');
-      const loadingSteps = [
-        'Loading Portfolio...',
-        'Initializing Components...',
-        'Setting up Animations...',
-        'Almost Ready...',
-        'Welcome!'
-      ];
-      
-      let stepIndex = 0;
-      const stepInterval = setInterval(() => {
-        if (stepIndex < loadingSteps.length) {
-          loadingText.textContent = loadingSteps[stepIndex];
-          stepIndex++;
-        } else {
-          clearInterval(stepInterval);
-        }
-      }, 400);
-      
-      function hidePreloader() {
-        const elapsed = Date.now() - startTime;
-        const remainingTime = Math.max(0, minLoadTime - elapsed);
-        
-        setTimeout(() => {
-          preloader.style.opacity = '0';
-          setTimeout(() => {
-            preloader.style.display = 'none';
-            
-            // Initialize particles and typing after preloader
-            createParticles();
-            
-            const typingTexts = [
-              'Computer Science & Technology Student',
-              'International Student in China',
-              'Full-Stack Developer',
-              'AI & ML Enthusiast',
-              'Problem Solver from Bangladesh',
-              'Future Software Engineer'
-            ];
-            
-            const typingElement = document.getElementById('typing-text');
-            createAdvancedTypingEffect(typingElement, typingTexts, 120, 60, 2000);
-            
-            triggerEntranceAnimations();
-          }, 500);
-        }, remainingTime);
-      }
-      
-      if (document.readyState === 'complete') {
-        hidePreloader();
-      } else {
-        window.addEventListener('load', hidePreloader);
-      }
     }
 
     // Sound Toggle Functionality
@@ -9896,8 +9763,8 @@ This message was sent from your portfolio contact form.`;
             <strong>${label} (Additional)</strong>
             <p>${placeholder}</p>
             <div class="contact-actions">
-              <button class="edit-btn" onclick="editContact('${type}', '${placeholder}')">✏️ Edit</button>
-              <button class="edit-btn" onclick="removeContact(this)" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #ef4444;">🗑️ Remove</button>
+              <button class="edit-btn admin-only" onclick="editContact('${type}', '${placeholder}')">✏️ Edit</button>
+              <button class="edit-btn admin-only" onclick="removeContact(this)" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #ef4444;">🗑️ Remove</button>
             </div>
           </div>
         `;
@@ -10505,16 +10372,6 @@ This message was sent from your portfolio contact form.`;
 
     // CAPTCHA system removed - direct access enabled
 
-    // Preloader removed - start typing effect immediately
-    document.addEventListener('DOMContentLoaded', function() {
-      const typingElement = document.getElementById('typing-text');
-      const originalText = 'Computer Science Student & Future Engineer';
-      createTypingEffect(typingElement, originalText, 80);
-      
-      // Trigger entrance animations for visible sections
-      triggerEntranceAnimations();
-    });
-
     // Trigger entrance animations for initially visible sections
     function triggerEntranceAnimations() {
       const visibleSections = document.querySelectorAll('section');
@@ -10528,15 +10385,6 @@ This message was sent from your portfolio contact form.`;
         }
       });
     }
-
-    // Show preloader on page unload (optional - for navigation)
-    window.addEventListener('beforeunload', function() {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.style.display = 'flex';
-        preloader.style.opacity = '1';
-      }
-    });
 
     // Enhanced Theme Toggle with Better Icons and Persistence
     // Enhanced Theme Toggle with localStorage and Keyboard Shortcuts
@@ -11659,7 +11507,24 @@ This message was sent from your portfolio contact form.`;
       initScrollReveal();
       initTestimonialsCarousel();
       initFloatingContact();
-      initEnhancedPreloader();
+
+      createParticles();
+
+      const typingTexts = [
+        'Computer Science & Technology Student',
+        'International Student in China',
+        'Full-Stack Developer',
+        'AI & ML Enthusiast',
+        'Problem Solver from Bangladesh',
+        'Future Software Engineer'
+      ];
+
+      const typingElement = document.getElementById('typing-text');
+      if (typingElement) {
+        createAdvancedTypingEffect(typingElement, typingTexts, 120, 60, 2000);
+      }
+
+      triggerEntranceAnimations();
       initSoundToggle();
       
       // Initialize cookie consent with a small delay to ensure DOM is fully ready
@@ -12619,6 +12484,10 @@ This message was sent from your portfolio contact form.`;
       if (password === ADMIN_PASSWORD) {
         isAdminAuthenticated = true;
         showNotification('✅ Admin access granted!', 'success');
+
+        if (typeof updateAdminStatus === 'function') {
+          updateAdminStatus();
+        }
         
         // Auto-logout after 30 minutes of inactivity
         resetAuthTimeout();
@@ -12642,6 +12511,10 @@ This message was sent from your portfolio contact form.`;
       authTimeout = setTimeout(() => {
         isAdminAuthenticated = false;
         showNotification('🔒 Admin session expired for security.', 'info');
+
+        if (typeof updateAdminStatus === 'function') {
+          updateAdminStatus();
+        }
       }, 30 * 60 * 1000); // 30 minutes
     }
 
@@ -12804,6 +12677,14 @@ This message was sent from your portfolio contact form.`;
       const loginBtn = document.getElementById('loginBtn');
       const logoutBtn = document.getElementById('logoutBtn');
       const adminToggle = document.getElementById('adminToggle');
+
+      if (document.body) {
+        document.body.classList.toggle('admin-auth', isAdminAuthenticated);
+      }
+
+      if (!statusText || !statusIndicator || !loginBtn || !logoutBtn || !adminToggle) {
+        return;
+      }
       
       if (isAdminAuthenticated) {
         statusText.textContent = 'Authenticated';
