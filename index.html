@@ -8988,6 +8988,12 @@
     </div>
   </div>
 
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- Supabase Configuration & Database Layer -->
+  <script src="supabase-config.js"></script>
+  
   <!-- JavaScript -->
   <script>
     // Typing Effect for Hero Section - Enhanced Version
@@ -11713,6 +11719,9 @@ This message was sent from your portfolio contact form.`;
         blogCard.className = 'blog-card';
         blogCard.style.opacity = '0';
         blogCard.style.transform = 'translateY(20px)';
+        if (post.id) {
+          blogCard.setAttribute('data-blog-id', 'blog-' + post.id);
+        }
         
         blogCard.innerHTML = `
           ${post.featured ? '<div class="featured-badge">Featured</div>' : ''}
@@ -11990,36 +11999,42 @@ This message was sent from your portfolio contact form.`;
     // Enhanced Dynamic Projects Loading (simulating external JSON)
     const projectsData = [
       {
+        id: "project-1",
         title: "Rock Paper Scissors Game",
         description: "A Java-based desktop game using Swing GUI with score tracking and multiple rounds.",
         technologies: ["Java", "Swing", "OOP"],
         status: "Completed"
       },
       {
+        id: "project-2",
         title: "Sensor Data Classifier (AI)",
         description: "Used CNN model to process and classify sensor data with 95% accuracy.",
         technologies: ["Python", "TensorFlow", "Machine Learning"],
         status: "Completed"
       },
       {
+        id: "project-3",
         title: "E-commerce Website",
         description: "Full-stack web application built with React and Node.js, featuring user authentication and payment integration.",
         technologies: ["React", "Node.js", "MongoDB", "Express"],
         status: "In Progress"
       },
       {
+        id: "project-4",
         title: "Weather App",
         description: "Real-time weather application using OpenWeatherMap API with location-based forecasts.",
         technologies: ["JavaScript", "API Integration", "CSS"],
         status: "Completed"
       },
       {
+        id: "project-5",
         title: "Task Management System",
         description: "A collaborative task management tool with drag-and-drop functionality and team collaboration features.",
         technologies: ["Vue.js", "Firebase", "Drag & Drop API"],
         status: "In Progress"
       },
       {
+        id: "project-6",
         title: "Portfolio Website",
         description: "Responsive portfolio website with modern design, dark mode, and smooth animations.",
         technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
@@ -12042,6 +12057,9 @@ This message was sent from your portfolio contact form.`;
     function createProjectCard(project) {
       const projectCard = document.createElement('div');
       projectCard.className = 'project-card';
+      if (project.id) {
+        projectCard.setAttribute('data-project-id', project.id);
+      }
       
       const techTags = project.technologies.map(tech => 
         `<span class="tech-tag">${tech}</span>`
@@ -17561,6 +17579,9 @@ This message was sent from your portfolio contact form.`;
       });
     }
   </script>
+  
+  <!-- Supabase Injector (overrides save/load functions for cloud persistence) -->
+  <script src="supabase-injector.js"></script>
 
   <!-- Admin Control Panel -->
   <div class="admin-panel" id="adminPanel">
