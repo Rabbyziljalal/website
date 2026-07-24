@@ -79,6 +79,7 @@
     body:not(.admin-auth) .timeline-edit-controls,
     body:not(.admin-auth) .image-overlay,
     body:not(.admin-auth) .profile-buttons,
+    body:not(.admin-auth) .cv-admin-controls,
     body:not(.admin-auth) .admin-only {
       display: none !important;
     }
@@ -134,73 +135,6 @@
       background: var(--accent);
       margin-left: 5px;
       animation: blink 1s infinite;
-    }
-
-    /* QR Code Modal */
-    .qr-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .qr-modal.show {
-      display: flex;
-      opacity: 1;
-    }
-
-    .qr-content {
-      background: var(--card-bg);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 400px;
-      margin: 20px;
-      transform: scale(0.8);
-      transition: transform 0.3s ease;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .qr-modal.show .qr-content {
-      transform: scale(1);
-    }
-
-    .qr-code-container {
-      margin: 20px 0;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      display: inline-block;
-    }
-
-    .qr-close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: var(--text-color);
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-    }
-
-    .qr-close:hover {
-      background-color: var(--shadow);
     }
 
     /* Cookie Consent */
@@ -342,6 +276,82 @@
 
     .cv-btn:active {
       transform: translateY(-1px);
+    }
+
+    .cv-admin-controls {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .cv-admin-btn {
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      font-size: 0.9rem;
+    }
+
+    .cv-admin-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    .cv-admin-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .cv-admin-btn.upload {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .cv-admin-btn.delete {
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+    }
+
+    .cv-admin-btn.url {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .cv-upload-progress {
+      width: 100%;
+      max-width: 300px;
+      height: 4px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 2px;
+      overflow: hidden;
+      margin: 10px auto 0;
+      display: none;
+    }
+
+    .cv-upload-progress.show {
+      display: block;
+    }
+
+    .cv-upload-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981, #34d399);
+      width: 0%;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .cv-status-text {
+      font-size: 0.85rem;
+      margin-top: 8px;
+      color: #4facfe;
+      min-height: 20px;
+      text-align: center;
     }
 
     /* Form Success Modal Enhancement */
@@ -8555,13 +8565,16 @@
   <section class="about reveal" id="about Me">
     <h2 data-translate="about Me">About Me</h2>
     <p>
-      Hello! I'm Rabby Zil Jalal Kanon, a passionate Computer Science and Technology student from Bangladesh, currently pursuing my studies at Nanjing University of Posts and Telecommunications in China. I love creating innovative web applications and exploring the fascinating world of artificial intelligence and machine learning.
+      Hello! I'm <strong>Rabby Zil Jalal Kanon</strong>, a passionate Computer Science and Technology student from Bangladesh, currently studying at <strong>Nanjing University of Posts and Telecommunications (NJUPT), China</strong>. I am deeply interested in <strong>Artificial Intelligence, Machine Learning, Full-Stack Development, and modern software engineering</strong>.
     </p>
     <p>
-      My journey in technology began with a curiosity about how websites work, and it has evolved into a comprehensive understanding of full-stack development, AI algorithms, and modern software engineering practices. I'm particularly interested in developing solutions that can make a positive impact on people's lives.
+      My journey in technology began with curiosity about how websites and applications work, and over time it evolved into a strong passion for building innovative software solutions and exploring advanced technologies. I enjoy developing projects that are both creative and practical, with the goal of solving real-world problems and creating meaningful impact.
     </p>
     <p>
-      When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or learning about the latest developments in AI and web development. I believe in continuous learning and always strive to stay updated with the latest industry trends.
+      I have worked on a variety of projects, including AI-powered educational platforms, web applications, networking systems, desktop applications, and mobile apps. Some of my notable projects include <strong>Taskademia</strong> (an AI-powered smart learning platform), <strong>GlobalTalk App</strong> (an AI language and culture companion), a Java-based <strong>Rock Paper Scissors Game</strong>, <strong>TCP model</strong> networking projects, <strong>hash table implementations</strong> in C++, and a <strong>digital clock application</strong> built with Java.
+    </p>
+    <p>
+      Beyond programming, I enjoy exploring new technologies, learning about the latest developments in AI, and continuously improving my technical and problem-solving skills. I also enjoy cooking Bangladeshi dishes and expressing creativity both inside and outside the world of technology. I strongly believe in <strong>continuous learning, innovation, and dedication</strong>, and my future goal is to become a skilled software engineer and AI researcher who contributes to impactful and innovative technological advancements around the world.
     </p>
     
     <!-- Location Info -->
@@ -8578,11 +8591,24 @@
           <span>📄</span>
           <span>Download PDF</span>
         </a>
-        <button class="cv-btn" id="generate-qr">
-          <span>📱</span>
-          <span>Generate QR Code</span>
-        </button>
       </div>
+      <!-- Admin-only CV controls -->
+      <div class="cv-admin-controls">
+        <input type="file" id="cvUploadInput" accept="application/pdf" style="display: none;">
+        <button class="cv-admin-btn upload" onclick="requireAdminAuth(() => document.getElementById('cvUploadInput').click(), 'upload CV')">
+          📤 Upload CV
+        </button>
+        <button class="cv-admin-btn url" onclick="requireAdminAuth(() => promptCVPublicUrl(), 'set public CV URL')">
+          🔗 Set Public URL
+        </button>
+        <button class="cv-admin-btn delete" onclick="requireAdminAuth(() => deleteAdminCV(), 'delete CV')">
+          🗑️ Delete CV
+        </button>
+        <div class="cv-upload-progress" id="cv-upload-progress">
+          <div class="cv-upload-progress-bar" id="cv-upload-progress-bar"></div>
+        </div>
+      </div>
+      <div class="cv-status-text" id="cv-status-text"></div>
     </div>
     
   </section>
@@ -8948,19 +8974,6 @@
     </div>
   </div>
 
-  <!-- QR Code Modal -->
-  <div class="qr-modal" id="qr-modal">
-    <div class="qr-content">
-      <button class="qr-close" id="qr-close">✕</button>
-      <h3>Contact QR Code</h3>
-      <p>Scan to get my contact information</p>
-      <div class="qr-code-container" id="qr-code-container">
-        <!-- QR code will be generated here -->
-      </div>
-      <p style="font-size: 0.9rem; color: #666;">Scan with your phone's camera</p>
-    </div>
-  </div>
-
   <!-- Cookie Consent -->
   <div class="cookie-consent" id="cookie-consent">
     <div class="cookie-content">
@@ -9093,24 +9106,69 @@
       }
     }
 
-    // QR Code Generator
-    function generateQRCode(text, size = 200) {
-      // Simple QR code generation using qr-server.com API
-      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(text)}`;
-      return qrUrl;
+    // ===== Shared CV URL Source of Truth =====
+    // Returns the best available public URL for the CV file.
+    // Priority:
+    //   1. Admin-set public URL (for uploaded CVs committed to GitHub)
+    //   2. Default resources/resume.pdf URL
+    function getCVPublicUrl() {
+      // Check if admin has set a custom public URL for the uploaded CV
+      const customPublicUrl = localStorage.getItem('portfolioAdminCVPublicUrl');
+      if (customPublicUrl) {
+        return customPublicUrl;
+      }
+      // Fall back to the default resume PDF URL
+      return 'https://rabbyziljalal.github.io/website/resources/resume.pdf';
     }
 
-    function showQRCode() {
-      // Use the full GitHub Pages URL for the resume PDF
-      const resumeUrl = 'https://rabbyziljalal.github.io/website/resources/resume.pdf';
+    // Admin function to set the public URL for the uploaded CV
+    function promptCVPublicUrl() {
+      const currentUrl = localStorage.getItem('portfolioAdminCVPublicUrl') || getCVPublicUrl();
+      const newUrl = prompt('🔗 Enter the public URL for your CV file.\n\nThis URL will be used by the QR code and should be accessible from any device.\n\nExample:\nhttps://rabbyziljalal.github.io/website/resources/resume.pdf\n\nLeave empty to reset to default.', currentUrl);
       
-      const qrContainer = document.getElementById('qr-code-container');
-      const qrUrl = generateQRCode(resumeUrl, 200);
+      if (newUrl === null) {
+        return; // User cancelled
+      }
       
-      qrContainer.innerHTML = `<img src="${qrUrl}" alt="Resume Download QR Code" style="max-width: 100%; height: auto;">`;
+      if (newUrl.trim() === '') {
+        // Reset to default
+        localStorage.removeItem('portfolioAdminCVPublicUrl');
+        showNotification('🔗 CV public URL reset to default.', 'info');
+        updateCVStatusText('🔗 CV public URL reset to default');
+        if (typeof extendAdminSession === 'function') extendAdminSession();
+        return;
+      }
       
-      document.getElementById('qr-modal').classList.add('show');
-      soundManager.playClick();
+      // Basic URL validation
+      try {
+        const url = new URL(newUrl.trim());
+        if (url.protocol !== 'https:' && url.protocol !== 'http:') {
+          showNotification('❌ URL must start with http:// or https://', 'error');
+          return;
+        }
+      } catch (e) {
+        showNotification('❌ Invalid URL format. Please enter a valid URL.', 'error');
+        return;
+      }
+      
+      // Save the public URL
+      localStorage.setItem('portfolioAdminCVPublicUrl', newUrl.trim());
+      showNotification('✅ CV public URL updated successfully!', 'success');
+      updateCVStatusText('🔗 Custom public URL set');
+      if (typeof soundManager !== 'undefined') soundManager.playSuccess();
+      if (typeof extendAdminSession === 'function') extendAdminSession();
+    }
+
+    // Helper to update the CV status text
+    function updateCVStatusText(message) {
+      const statusText = document.getElementById('cv-status-text');
+      if (statusText) {
+        statusText.textContent = message;
+        statusText.style.color = '#10b981';
+        setTimeout(() => {
+          statusText.textContent = '';
+        }, 4000);
+      }
     }
 
     // Cookie Consent Management
@@ -11507,6 +11565,8 @@ This message was sent from your portfolio contact form.`;
       initScrollReveal();
       initTestimonialsCarousel();
       initFloatingContact();
+      initAdminCVUpload();
+      loadSavedCV();
 
       createParticles();
 
@@ -11534,22 +11594,6 @@ This message was sent from your portfolio contact form.`;
       
       addSoundEffects();
       
-      // QR Code button
-      document.getElementById('generate-qr').addEventListener('click', showQRCode);
-      
-      // QR Modal close
-      document.getElementById('qr-close').addEventListener('click', () => {
-        document.getElementById('qr-modal').classList.remove('show');
-        soundManager.playClick();
-      });
-      
-      // Close QR modal on background click
-      document.getElementById('qr-modal').addEventListener('click', (e) => {
-        if (e.target.id === 'qr-modal') {
-          e.target.classList.remove('show');
-          soundManager.playClick();
-        }
-      });
     });
 
     // Animated Counter Function
@@ -13483,7 +13527,7 @@ This message was sent from your portfolio contact form.`;
       }
     }
 
-    // Download CV Function
+    // Download CV Function - now downloads the actual PDF if uploaded, or the default file
     function downloadCV() {
       closeHamburgerMenu();
       
@@ -13492,85 +13536,35 @@ This message was sent from your portfolio contact form.`;
       downloadStatus.textContent = 'Downloading...';
       downloadStatus.style.color = '#ffa500';
       
-      // Simulate download process
+      // Try to download the actual resume PDF or use stored uploaded CV
+      const cvData = localStorage.getItem('portfolioAdminCV');
+      
       setTimeout(() => {
-        // Create a downloadable CV (you can replace this with actual CV data)
-        const cvContent = `
-%PDF-1.4
-1 0 obj
-<<
-/Type /Catalog
-/Pages 2 0 R
->>
-endobj
-
-2 0 obj
-<<
-/Type /Pages
-/Kids [3 0 R]
-/Count 1
->>
-endobj
-
-3 0 obj
-<<
-/Type /Page
-/Parent 2 0 R
-/MediaBox [0 0 612 792]
-/Contents 4 0 R
-/Resources <<
-/Font <<
-/F1 5 0 R
->>
->>
->>
-endobj
-
-4 0 obj
-<<
-/Length 100
->>
-stream
-BT
-/F1 24 Tf
-100 700 Td
-(Rabby - Software Developer CV) Tj
-ET
-endstream
-endobj
-
-5 0 obj
-<<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica
->>
-endobj
-
-xref
-0 6
-0000000000 65535 f 
-0000000010 00000 n 
-0000000053 00000 n 
-0000000125 00000 n 
-0000000348 00000 n 
-0000000565 00000 n 
-trailer
-<<
-/Size 6
-/Root 1 0 R
->>
-startxref
-625
-%%EOF`;
-
-        const blob = new Blob([cvContent], { type: 'application/pdf' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Rabby_CV_2025.pdf';
-        a.click();
-        window.URL.revokeObjectURL(url);
+        if (cvData) {
+          // Download the admin-uploaded CV
+          const byteString = atob(cvData.split(',')[1]);
+          const mimeString = cvData.split(',')[0].split(':')[1].split(';')[0];
+          const ab = new ArrayBuffer(byteString.length);
+          const ia = new Uint8Array(ab);
+          for (let i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+          }
+          const blob = new Blob([ab], { type: mimeString });
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'Rabby_Zil_Jalal_Kanon_Resume.pdf';
+          a.click();
+          window.URL.revokeObjectURL(url);
+        } else {
+          // Fallback: trigger the existing download PDF link
+          const downloadLink = document.getElementById('download-pdf');
+          if (downloadLink) {
+            downloadLink.click();
+          } else {
+            showNotification('❌ No CV available to download.', 'error');
+          }
+        }
         
         downloadStatus.textContent = 'Downloaded!';
         downloadStatus.style.color = '#00ff00';
@@ -13579,7 +13573,152 @@ startxref
           downloadStatus.textContent = 'Ready';
           downloadStatus.style.color = '#4facfe';
         }, 3000);
-      }, 1000);
+      }, 500);
+    }
+
+    // Upload CV Function (admin only)
+    function initAdminCVUpload() {
+      const uploadInput = document.getElementById('cvUploadInput');
+      if (!uploadInput) return;
+      
+      uploadInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        // Validate file is PDF
+        if (file.type !== 'application/pdf') {
+          showNotification('❌ Please select a PDF file.', 'error');
+          return;
+        }
+        
+        // Validate file size (max 10MB)
+        if (file.size > 10 * 1024 * 1024) {
+          showNotification('❌ File size should be less than 10MB.', 'error');
+          return;
+        }
+        
+        // Show progress
+        const progressContainer = document.getElementById('cv-upload-progress');
+        const progressBar = document.getElementById('cv-upload-progress-bar');
+        const statusText = document.getElementById('cv-status-text');
+        
+        progressContainer.classList.add('show');
+        statusText.textContent = 'Uploading CV...';
+        statusText.style.color = '#4facfe';
+        
+        // Simulate progress
+        let progress = 0;
+        const progressInterval = setInterval(() => {
+          progress += Math.random() * 20 + 5;
+          if (progress > 95) {
+            clearInterval(progressInterval);
+            progress = 100;
+          }
+          progressBar.style.width = progress + '%';
+        }, 200);
+        
+        // Read file as data URL and store in localStorage
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const cvData = e.target.result;
+          
+          // Store in localStorage
+          try {
+            localStorage.setItem('portfolioAdminCV', cvData);
+            
+            // Complete progress
+            clearInterval(progressInterval);
+            progressBar.style.width = '100%';
+            statusText.textContent = '✅ CV uploaded successfully!';
+            statusText.style.color = '#10b981';
+            
+            // Update the download link
+            updateDownloadLink(cvData);
+            
+            showNotification('✅ CV uploaded successfully!', 'success');
+            if (typeof soundManager !== 'undefined') soundManager.playSuccess();
+            
+            // Reset progress after delay
+            setTimeout(() => {
+              progressContainer.classList.remove('show');
+              progressBar.style.width = '0%';
+            }, 2000);
+            
+            // Extend admin session
+            if (typeof extendAdminSession === 'function') extendAdminSession();
+            
+          } catch (storageError) {
+            clearInterval(progressInterval);
+            progressBar.style.width = '0%';
+            progressContainer.classList.remove('show');
+            statusText.textContent = '❌ Failed to store CV. Storage may be full.';
+            statusText.style.color = '#ef4444';
+            showNotification('❌ Failed to upload CV. Storage may be limited.', 'error');
+          }
+        };
+        
+        reader.onerror = function() {
+          clearInterval(progressInterval);
+          progressBar.style.width = '0%';
+          progressContainer.classList.remove('show');
+          statusText.textContent = '❌ Failed to read file.';
+          statusText.style.color = '#ef4444';
+          showNotification('❌ Failed to read the file.', 'error');
+        };
+        
+        reader.readAsDataURL(file);
+        
+        // Reset the input
+        event.target.value = '';
+      });
+    }
+
+    // Update download link with uploaded CV data
+    function updateDownloadLink(cvData) {
+      const downloadLink = document.getElementById('download-pdf');
+      if (downloadLink) {
+        downloadLink.href = cvData;
+      }
+    }
+
+    // Delete CV Function (admin only)
+    function deleteAdminCV() {
+      if (!confirm('🗑️ Are you sure you want to delete the uploaded CV? This action cannot be undone.')) {
+        return;
+      }
+      
+      // Remove from localStorage
+      localStorage.removeItem('portfolioAdminCV');
+      
+      // Reset download link back to default
+      const downloadLink = document.getElementById('download-pdf');
+      if (downloadLink) {
+        downloadLink.href = 'resources/resume.pdf';
+      }
+      
+      // Show status
+      const statusText = document.getElementById('cv-status-text');
+      statusText.textContent = '🗑️ CV deleted successfully.';
+      statusText.style.color = '#ef4444';
+      
+      showNotification('🗑️ CV deleted successfully.', 'info');
+      
+      setTimeout(() => {
+        statusText.textContent = '';
+      }, 3000);
+      
+      if (typeof extendAdminSession === 'function') extendAdminSession();
+    }
+
+    // Load saved CV on page load
+    function loadSavedCV() {
+      const cvData = localStorage.getItem('portfolioAdminCV');
+      if (cvData) {
+        updateDownloadLink(cvData);
+        const statusText = document.getElementById('cv-status-text');
+        statusText.textContent = '📄 Custom CV loaded';
+        statusText.style.color = '#10b981';
+      }
     }
 
     // Logout Function
@@ -20455,7 +20594,7 @@ startxref
             <div class="testimonial-project">
               <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Student Mentoring Program</div>
               <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Academic to industry transition support</div>
-            </div>
+              </div>
             <div class="testimonial-tags testimonial-editable-field" data-field="tags">
               <span class="testimonial-tag">Student Mentoring</span>
               <span class="testimonial-tag">Industry Readiness</span>
