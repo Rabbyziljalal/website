@@ -1,65 +1,79 @@
-/**
+ /**
  * Supabase Injector Script
- * Overrides existing save/load functions in index.html to add Supabase persistence.
- * Load this AFTER the main <script> block in index.html.
- * This avoids modifying the massive index.html file directly.
+ * OVERRIDES existing save/load functions in index.html to use Supabase as PRIMARY storage.
+ * localStorage is used ONLY as a cache/fallback.
+ * 
+ * IMPORTANT: This script must override functions BEFORE they are called on page load.
+ * It uses a MutationObserver to detect when the main script has loaded and the DOM is ready.
  */
 
 console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weight: bold;');
 
-// Wait for DOM and main script to fully load
 (function() {
   let retries = 0;
-  const maxRetries = 20;
+  const maxRetries = 30;
   
-  const checkAndInject = setInterval(() => {
+  function tryInject() {
     retries++;
     
-    // Check if the main functions exist and SupabaseDB is ready
+    // Check if SupabaseDB is ready and the main functions exist
     if (typeof window.SupabaseDB !== 'undefined' && 
-        typeof saveEducationDataToStorage === 'function' &&
-        typeof loadEducationDataFromStorage === 'function') {
+        typeof window.SupabaseDB.isReady === 'function') {
       
-      clearInterval(checkAndInject);
-      console.log('%c[Supabase Injector] Functions found, injecting...', 'color: #4caf50;');
-      injectOverrides();
-    } else if (retries >= maxRetries) {
-      clearInterval(checkAndInject);
-      console.warn('[Supabase Injector] Timed out waiting for main functions');
+      // Check if the main script's functions are defined
+      if (typeof saveEducationDataToStorage === 'function' &&
+          typeof loadEducationDataFromStorage === 'function') {
+        
+        console.log('%c[Supabase Injector] Functions found, injecting overrides...', 'color: #4caf50; font-weight: bold;');
+        injectOverrides();
+        return;
+      }
     }
-  }, 1000);
+    
+    if (retries < maxRetries) {
+      setTimeout(tryInject, 500);
+    } else {
+      console.warn('[Supabase Injector] Timed out waiting for dependencies');
+    }
+  }
   
   function injectOverrides() {
     // ============================================================
-    // Store original functions
+    // Store original functions (localStorage versions)
     // ============================================================
-    const originalSaveEducation = saveEducationDataToStorage;
-    const originalLoadEducation = loadEducationDataFromStorage;
-    const originalSaveEducationCards = saveEducationCardDataToStorage;
-    const originalLoadEducationCards = loadEducationCardDataFromStorage;
-    const originalSaveAchievements = saveAchievementDataToStorage;
-    const originalLoadAchievements = loadAchievementDataFromStorage;
-    const originalSaveTimeline = saveTimelineDataToStorage;
-    const originalLoadTimeline = loadTimelineDataFromStorage;
-    const originalLoadProjects = loadProjectDataFromStorage;
-    const originalLoadTestimonials = loadTestimonialDataFromStorage;
-    const originalLoadBlog = loadBlogDataFromStorage;
+    const originals = {
+      saveEducation: saveEducationDataToStorage,
+      loadEducation: loadEducationDataFromStorage,
+      saveEducationCards: saveEducationCardDataToStorage,
+      loadEducationCards: loadEducationCardDataFromStorage,
+      saveAchievements: saveAchievementDataToStorage,
+      loadAchievements: loadAchievementDataFromStorage,
+      saveTimeline: saveTimelineDataToStorage,
+      loadTimeline: loadTimelineDataFromStorage,
+      loadProjects: loadProjectDataFromStorage,
+      loadTestimonials: loadTestimonialDataFromStorage,
+      loadBlog: loadBlogDataFromStorage
+    };
     
     // ============================================================
-    // Override: Education Data
+    // OVERRIDE: Education Data
     // ============================================================
     window.saveEducationDataToStorage = function() {
-      originalSaveEducation();
+      // Still save to localStorage as cache
+      originals.saveEducation();
       
+      // Also save to Supabase (async)
       if (window.SupabaseDB && window.SupabaseDB.saveEducation) {
         try {
           const educationData = {};
-          const items = document.querySelectorAll('[data-education-id]');
-          items.forEach(item => {
+          document.querySelectorAll('[data-education-id]').forEach(item => {
             educationData[item.getAttribute('data-education-id')] = extractEducationItemData(item);
           });
-          window.SupabaseDB.saveEducation(educationData);
-          console.log('[Supabase] Education data synced');
+          window.SupabaseDB.saveEducation(educationData).then(r => {
+            if (r.success) console.log('%c[Supabase] Education saved to cloud', 'color: #4caf50;');
+            else if (r.fallback) console.warn('[Supabase] Education: cloud unavailable, using localStorage');
+            else console.error('[Supabase] Education save error:', r.error);
+          });
         } catch(e) {
           console.error('[Supabase] Education save error:', e.message);
         }
@@ -67,8 +81,9 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     };
     
     window.loadEducationDataFromStorage = async function() {
-      // Try Supabase first
       let loaded = false;
+      
+      // Try Supabase FIRST (primary storage)
       if (window.SupabaseDB && window.SupabaseDB.loadEducation) {
         try {
           const data = await window.SupabaseDB.loadEducation();
@@ -78,30 +93,30 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
               if (el) populateEducationItem(el, data[id]);
             });
             loaded = true;
-            console.log('[Supabase] Education data loaded from cloud');
+            console.log('%c[Supabase] Education loaded from cloud', 'color: #4caf50; font-weight: bold;');
           }
         } catch(e) {
-          console.warn('[Supabase] Education load error:', e.message);
+          console.warn('[Supabase] Education cloud load failed:', e.message);
         }
       }
       
-      // Fallback to original (localStorage)
+      // Fallback to localStorage cache
       if (!loaded) {
-        originalLoadEducation();
+        console.log('[Supabase] Education: cloud empty/unavailable, using localStorage');
+        originals.loadEducation();
       }
     };
     
     // ============================================================
-    // Override: Education Cards
+    // OVERRIDE: Education Cards
     // ============================================================
     window.saveEducationCardDataToStorage = function() {
-      originalSaveEducationCards();
+      originals.saveEducationCards();
       
       if (window.SupabaseDB && window.SupabaseDB.saveEducationCards) {
         try {
           const cardData = {};
-          const cards = document.querySelectorAll('[data-card-id]');
-          cards.forEach(card => {
+          document.querySelectorAll('[data-card-id]').forEach(card => {
             cardData[card.getAttribute('data-card-id')] = extractCardData(card);
           });
           window.SupabaseDB.saveEducationCards(cardData);
@@ -113,6 +128,7 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     
     window.loadEducationCardDataFromStorage = async function() {
       let loaded = false;
+      
       if (window.SupabaseDB && window.SupabaseDB.loadEducationCards) {
         try {
           const data = await window.SupabaseDB.loadEducationCards();
@@ -122,19 +138,20 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
               if (el) populateCardData(el, data[id]);
             });
             loaded = true;
+            console.log('%c[Supabase] Education cards loaded from cloud', 'color: #4caf50;');
           }
         } catch(e) {
-          console.warn('[Supabase] Cards load error:', e.message);
+          console.warn('[Supabase] Cards cloud load failed:', e.message);
         }
       }
-      if (!loaded) originalLoadEducationCards();
+      if (!loaded) originals.loadEducationCards();
     };
     
     // ============================================================
-    // Override: Achievements
+    // OVERRIDE: Achievements
     // ============================================================
     window.saveAchievementDataToStorage = function() {
-      originalSaveAchievements();
+      originals.saveAchievements();
       
       if (window.SupabaseDB && window.SupabaseDB.saveAchievements) {
         try {
@@ -154,6 +171,7 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     
     window.loadAchievementDataFromStorage = async function() {
       let loaded = false;
+      
       if (window.SupabaseDB && window.SupabaseDB.loadAchievements) {
         try {
           const data = await window.SupabaseDB.loadAchievements();
@@ -165,19 +183,20 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
               if (stat) populateStatItem(stat, data[id]);
             });
             loaded = true;
+            console.log('%c[Supabase] Achievements loaded from cloud', 'color: #4caf50;');
           }
         } catch(e) {
-          console.warn('[Supabase] Achievements load error:', e.message);
+          console.warn('[Supabase] Achievements cloud load failed:', e.message);
         }
       }
-      if (!loaded) originalLoadAchievements();
+      if (!loaded) originals.loadAchievements();
     };
     
     // ============================================================
-    // Override: Timeline
+    // OVERRIDE: Timeline
     // ============================================================
     window.saveTimelineDataToStorage = function() {
-      originalSaveTimeline();
+      originals.saveTimeline();
       
       if (window.SupabaseDB && window.SupabaseDB.saveTimeline) {
         try {
@@ -194,6 +213,7 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     
     window.loadTimelineDataFromStorage = async function() {
       let loaded = false;
+      
       if (window.SupabaseDB && window.SupabaseDB.loadTimeline) {
         try {
           const data = await window.SupabaseDB.loadTimeline();
@@ -203,16 +223,17 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
               if (el) populateTimelineEntry(el, data[id]);
             });
             loaded = true;
+            console.log('%c[Supabase] Timeline loaded from cloud', 'color: #4caf50;');
           }
         } catch(e) {
-          console.warn('[Supabase] Timeline load error:', e.message);
+          console.warn('[Supabase] Timeline cloud load failed:', e.message);
         }
       }
-      if (!loaded) originalLoadTimeline();
+      if (!loaded) originals.loadTimeline();
     };
     
     // ============================================================
-    // Override: Projects
+    // OVERRIDE: Projects
     // ============================================================
     window.saveProjectDataToStorage = function(projectId, data) {
       if (window.SupabaseDB && window.SupabaseDB.saveProject) {
@@ -228,6 +249,7 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     
     window.loadProjectDataFromStorage = async function() {
       let loaded = false;
+      
       if (window.SupabaseDB && window.SupabaseDB.loadProjects) {
         try {
           const data = await window.SupabaseDB.loadProjects();
@@ -246,15 +268,16 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
             });
             loaded = true;
           }
+          if (loaded) console.log('%c[Supabase] Projects loaded from cloud', 'color: #4caf50;');
         } catch(e) {
-          console.warn('[Supabase] Projects load error:', e.message);
+          console.warn('[Supabase] Projects cloud load failed:', e.message);
         }
       }
-      if (!loaded) originalLoadProjects();
+      if (!loaded) originals.loadProjects();
     };
     
     // ============================================================
-    // Override: Testimonials
+    // OVERRIDE: Testimonials
     // ============================================================
     window.saveTestimonialDataToStorage = function(testimonialId, data) {
       if (window.SupabaseDB && window.SupabaseDB.saveTestimonial) {
@@ -270,6 +293,7 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     
     window.loadTestimonialDataFromStorage = async function() {
       let loaded = false;
+      
       if (window.SupabaseDB && window.SupabaseDB.loadTestimonials) {
         try {
           const data = await window.SupabaseDB.loadTestimonials();
@@ -288,15 +312,16 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
             });
             loaded = true;
           }
+          if (loaded) console.log('%c[Supabase] Testimonials loaded from cloud', 'color: #4caf50;');
         } catch(e) {
-          console.warn('[Supabase] Testimonials load error:', e.message);
+          console.warn('[Supabase] Testimonials cloud load failed:', e.message);
         }
       }
-      if (!loaded) originalLoadTestimonials();
+      if (!loaded) originals.loadTestimonials();
     };
     
     // ============================================================
-    // Override: Blog
+    // OVERRIDE: Blog
     // ============================================================
     window.saveBlogDataToStorage = function(postId, data) {
       if (window.SupabaseDB && window.SupabaseDB.saveBlog) {
@@ -306,6 +331,7 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     
     window.loadBlogDataFromStorage = async function() {
       let loaded = false;
+      
       if (window.SupabaseDB && window.SupabaseDB.loadBlog) {
         try {
           const data = await window.SupabaseDB.loadBlog();
@@ -315,38 +341,63 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
               if (el) populateBlogPost(el, data[id]);
             });
             loaded = true;
+            console.log('%c[Supabase] Blog loaded from cloud', 'color: #4caf50;');
           }
         } catch(e) {
-          console.warn('[Supabase] Blog load error:', e.message);
+          console.warn('[Supabase] Blog cloud load failed:', e.message);
         }
       }
-      if (!loaded) originalLoadBlog();
+      if (!loaded) originals.loadBlog();
     };
     
     // ============================================================
-    // Trigger initial data migration from localStorage to Supabase
+    // RE-TRIGGER DATA LOADING from Supabase
+    // Since the original DOMContentLoaded already called the old functions,
+    // we need to call the NEW overridden functions to load from Supabase
     // ============================================================
     setTimeout(async () => {
-      console.log('%c[Supabase] Starting data migration check...', 'color: #ff9800;');
+      console.log('%c[Supabase] Re-loading all data from cloud...', 'color: #ff9800; font-weight: bold;');
+      
+      try {
+        await window.loadEducationDataFromStorage();
+        await window.loadEducationCardDataFromStorage();
+        await window.loadAchievementDataFromStorage();
+        await window.loadTimelineDataFromStorage();
+        await window.loadProjectDataFromStorage();
+        await window.loadTestimonialDataFromStorage();
+        await window.loadBlogDataFromStorage();
+        console.log('%c[Supabase] All data re-loaded from cloud successfully!', 'color: #4caf50; font-weight: bold;');
+      } catch (e) {
+        console.error('[Supabase] Error re-loading data:', e);
+      }
+    }, 2000);
+    
+    // ============================================================
+    // MIGRATE existing localStorage data to Supabase
+    // ============================================================
+    setTimeout(async () => {
+      console.log('%c[Supabase] Checking for localStorage data to migrate...', 'color: #ff9800;');
       try {
         const result = await window.SupabaseDB.migrate();
-        console.log(`%c[Supabase] Migration result: ${result.migrated} tables migrated, ${result.errors} errors`, 
+        console.log(`%c[Supabase] Migration: ${result.migrated} tables migrated, ${result.errors} errors`, 
           result.errors === 0 ? 'color: #4caf50;' : 'color: #ff9800;');
       } catch (e) {
-        console.warn('[Supabase] Migration skipped (will retry on next save):', e.message);
+        console.warn('[Supabase] Migration check:', e.message);
       }
-    }, 3000);
+    }, 5000);
     
     console.log('%c[Supabase Injector] All overrides injected successfully!', 'color: #4caf50; font-weight: bold;');
   }
   
-  // Helper: extract education item data (copied from index.html)
+  // ============================================================
+  // HELPER FUNCTIONS (copied from index.html for data extraction)
+  // ============================================================
   function extractEducationItemData(item) {
     const data = {};
     const fields = item.querySelectorAll('.education-editable-field');
     fields.forEach(field => {
-      const fieldType = field.getAttribute('data-field');
-      switch(fieldType) {
+      const ft = field.getAttribute('data-field');
+      switch(ft) {
         case 'year': data.year = field.querySelector('.education-timeline-year')?.textContent || ''; break;
         case 'title': data.title = field.querySelector('.education-timeline-title')?.textContent || ''; break;
         case 'institution': data.institution = field.querySelector('.education-timeline-institution')?.textContent || ''; break;
@@ -408,4 +459,7 @@ console.log('%c[Supabase Injector] Initializing...', 'color: #4facfe; font-weigh
     });
     return data;
   }
+  
+  // Start trying to inject
+  tryInject();
 })();

@@ -3337,169 +3337,6 @@
       }
     }
 
-    /* Testimonial Edit Functionality */
-    .testimonial-edit-controls {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      display: flex;
-      gap: 8px;
-      opacity: 0;
-      transition: all 0.3s ease;
-      z-index: 10;
-    }
-
-    .testimonial-showcase-card:hover .testimonial-edit-controls,
-    .featured-testimonial-card:hover .testimonial-edit-controls,
-    .testimonials-stat-card:hover .testimonial-edit-controls,
-    .client-category-card:hover .testimonial-edit-controls {
-      opacity: 1;
-      transform: scale(1.05);
-    }
-
-    .testimonial-edit-btn,
-    .testimonial-save-btn,
-    .testimonial-cancel-btn {
-      background: linear-gradient(135deg, rgba(103, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: white;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 2px 10px rgba(103, 126, 234, 0.3);
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    }
-
-    .testimonial-edit-btn:hover {
-      background: linear-gradient(135deg, rgba(103, 126, 234, 1), rgba(118, 75, 162, 1));
-      transform: translateY(-1px) scale(1.05);
-      box-shadow: 0 4px 15px rgba(103, 126, 234, 0.5);
-    }
-
-    .testimonial-save-btn {
-      background: linear-gradient(135deg, rgba(0, 255, 0, 0.6), rgba(0, 200, 0, 0.6));
-      border: 1px solid rgba(0, 255, 0, 0.4);
-      box-shadow: 0 2px 10px rgba(0, 255, 0, 0.3);
-    }
-
-    .testimonial-save-btn:hover {
-      background: linear-gradient(135deg, rgba(0, 255, 0, 0.8), rgba(0, 200, 0, 0.8));
-      transform: translateY(-1px) scale(1.05);
-      box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5);
-    }
-
-    .testimonial-cancel-btn {
-      background: linear-gradient(135deg, rgba(255, 0, 0, 0.6), rgba(200, 0, 0, 0.6));
-      border: 1px solid rgba(255, 0, 0, 0.4);
-      box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
-    }
-
-    .testimonial-cancel-btn:hover {
-      background: linear-gradient(135deg, rgba(255, 0, 0, 0.8), rgba(200, 0, 0, 0.8));
-      transform: translateY(-1px) scale(1.05);
-      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
-    }
-
-    /* Edit mode styling for testimonials */
-    .testimonial-edit-mode {
-      background: rgba(255, 255, 255, 0.08) !important;
-      border: 2px dashed rgba(103, 126, 234, 0.5) !important;
-      border-radius: 15px;
-    }
-
-    .testimonial-editable-field {
-      position: relative;
-    }
-
-    .testimonial-editable-field.editing input,
-    .testimonial-editable-field.editing textarea {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(103, 126, 234, 0.5);
-      border-radius: 8px;
-      padding: 10px;
-      color: white;
-      font-size: inherit;
-      font-family: inherit;
-      backdrop-filter: blur(10px);
-      margin: 5px 0;
-    }
-
-    .testimonial-editable-field.editing textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    .testimonial-editable-field.editing input:focus,
-    .testimonial-editable-field.editing textarea:focus {
-      outline: none;
-      border-color: rgba(103, 126, 234, 0.8);
-      box-shadow: 0 0 15px rgba(103, 126, 234, 0.3);
-    }
-
-    /* Testimonial rating edit styling */
-    .testimonial-rating.editing {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(103, 126, 234, 0.5);
-      border-radius: 8px;
-      padding: 8px;
-      backdrop-filter: blur(10px);
-    }
-
-    .testimonial-rating.editing input {
-      width: 60px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(103, 126, 234, 0.5);
-      border-radius: 6px;
-      padding: 6px;
-      color: white;
-      text-align: center;
-      font-family: inherit;
-    }
-
-    /* Testimonial tags edit styling */
-    .testimonial-tags.editing {
-      border: 1px dashed rgba(103, 126, 234, 0.5);
-      border-radius: 8px;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .testimonial-tags.editing input {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(103, 126, 234, 0.5);
-      border-radius: 15px;
-      padding: 4px 12px;
-      color: white;
-      font-size: 0.8rem;
-      margin: 2px;
-      min-width: 80px;
-    }
-
-    /* Testimonial stats edit styling */
-    .testimonials-stat-card.stat-edit-mode {
-      background: rgba(255, 255, 255, 0.08) !important;
-      border: 1px dashed rgba(103, 126, 234, 0.5) !important;
-      border-radius: 8px;
-    }
-
-    .testimonial-stat-editable-field.editing input {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(103, 126, 234, 0.5);
-      border-radius: 6px;
-      padding: 8px;
-      color: white;
-      font-size: inherit;
-      font-family: inherit;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-
     /* Blog Edit Functionality */
     .blog-edit-controls {
       position: absolute;
@@ -4130,513 +3967,6 @@
       }
     }
 
-    /* Comprehensive Testimonials Interface */
-    .testimonials-interface {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.95);
-      backdrop-filter: blur(20px);
-      z-index: 10000;
-      display: none;
-      overflow-y: auto;
-      animation: fadeIn 0.3s ease-out;
-    }
-
-    .testimonials-interface.active {
-      display: block;
-    }
-
-    .testimonials-interface-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 60px 20px 40px;
-      position: relative;
-    }
-
-    .testimonials-interface-header {
-      text-align: center;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    .testimonials-interface-title {
-      font-size: 3rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-      text-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
-    }
-
-    .testimonials-interface-subtitle {
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 30px;
-    }
-
-    .testimonials-close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: white;
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-
-    .testimonials-close-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.1);
-    }
-
-    .testimonials-tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .testimonials-tab {
-      padding: 12px 24px;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: white;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      backdrop-filter: blur(10px);
-    }
-
-    .testimonials-tab.active {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-    }
-
-    .testimonials-tab:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-    }
-
-    .testimonials-tab-content {
-      display: none;
-      animation: slideInUp 0.5s ease-out;
-    }
-
-    .testimonials-tab-content.active {
-      display: block;
-    }
-
-    /* Testimonials Grid */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .testimonial-showcase-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      padding: 30px;
-    }
-
-    .testimonial-showcase-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    }
-
-    .testimonial-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .testimonial-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: white;
-      margin-right: 20px;
-      flex-shrink: 0;
-    }
-
-    .testimonial-info {
-      flex: 1;
-    }
-
-    .testimonial-name {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 5px;
-    }
-
-    .testimonial-position {
-      font-size: 1rem;
-      color: #667eea;
-      margin-bottom: 5px;
-    }
-
-    .testimonial-company {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .testimonial-rating {
-      display: flex;
-      gap: 5px;
-      margin-bottom: 20px;
-    }
-
-    .star {
-      color: #ffd700;
-      font-size: 1.2rem;
-    }
-
-    .testimonial-text {
-      color: rgba(255, 255, 255, 0.9);
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      font-style: italic;
-      position: relative;
-    }
-
-    .testimonial-text::before {
-      content: '"';
-      position: absolute;
-      left: -15px;
-      top: -10px;
-      font-size: 3rem;
-      color: #667eea;
-      opacity: 0.3;
-    }
-
-    .testimonial-text::after {
-      content: '"';
-      position: absolute;
-      right: -10px;
-      bottom: -20px;
-      font-size: 3rem;
-      color: #667eea;
-      opacity: 0.3;
-    }
-
-    .testimonial-project {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .testimonial-project-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 5px;
-    }
-
-    .testimonial-project-desc {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .testimonial-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .testimonial-tag {
-      background: rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.9);
-      padding: 4px 12px;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .testimonial-date {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.6);
-      text-align: right;
-    }
-
-    /* Featured Testimonials */
-    .featured-testimonials {
-      margin-bottom: 50px;
-    }
-
-    .featured-testimonial-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 40px;
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      margin-bottom: 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-testimonial-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .featured-testimonial-card:hover::before {
-      left: 100%;
-    }
-
-    .featured-testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .featured-testimonial-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 25px;
-    }
-
-    .featured-testimonial-avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: white;
-      margin-right: 25px;
-    }
-
-    .featured-testimonial-info h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 8px;
-    }
-
-    .featured-testimonial-info .position {
-      font-size: 1.1rem;
-      color: #667eea;
-      margin-bottom: 5px;
-    }
-
-    .featured-testimonial-info .company {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .featured-testimonial-text {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.9);
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    /* Testimonials Statistics */
-    .testimonials-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .testimonials-stat-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      padding: 25px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .testimonials-stat-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .testimonials-stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #667eea;
-      margin-bottom: 10px;
-    }
-
-    .testimonials-stat-label {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.8);
-      font-weight: 500;
-    }
-
-    /* Client Categories */
-    .client-categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .client-category-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      padding: 25px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .client-category-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .client-category-icon {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .client-category-name {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 10px;
-    }
-
-    .client-category-count {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Design for Testimonials Interface */
-    @media (max-width: 768px) {
-      .testimonials-interface-title {
-        font-size: 2rem;
-      }
-      
-      .testimonials-interface-content {
-        padding: 40px 15px 20px;
-      }
-      
-      .testimonials-tabs {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .testimonials-tab {
-        width: 100%;
-        max-width: 250px;
-        margin-bottom: 10px;
-      }
-      
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      
-      .testimonial-showcase-card {
-        margin-bottom: 20px;
-        padding: 20px;
-      }
-      
-      .testimonials-close-btn {
-        top: 10px;
-        right: 10px;
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-      }
-      
-      .testimonial-header {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .testimonial-avatar {
-        margin-right: 0;
-        margin-bottom: 15px;
-      }
-      
-      .featured-testimonial-header {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .featured-testimonial-avatar {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .testimonials-interface-title {
-        font-size: 1.5rem;
-      }
-      
-      .testimonials-interface-subtitle {
-        font-size: 1rem;
-      }
-      
-      .testimonial-showcase-card {
-        padding: 15px;
-      }
-      
-      .featured-testimonial-card {
-        padding: 25px;
-      }
-      
-      .testimonial-avatar,
-      .featured-testimonial-avatar {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-      }
-      
-      .testimonials-stats {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      }
-    }
 
     /* Achievements Section */
     .achievements-container {
@@ -4714,106 +4044,205 @@
       opacity: 0.8;
     }
 
-    /* Career Timeline */
-    .career-timeline {
-      position: relative;
-      max-width: 900px;
+    /* Career Timeline - Enhanced 4 Column Grid Layout */
+    .simple-timeline {
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 40px 0;
+      padding: 60px 40px;
     }
 
-    .career-timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 3px;
-      height: 100%;
-      background: linear-gradient(to bottom, var(--accent), #4ade80);
-      border-radius: 2px;
-    }
-
-    .timeline-entry {
-      display: flex;
-      margin-bottom: 50px;
-      position: relative;
-      align-items: center;
-    }
-
-    .timeline-entry:nth-child(odd) {
-      flex-direction: row;
-    }
-
-    .timeline-entry:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .timeline-content {
-      flex: 1;
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 160px 1fr 1fr 1.6fr;
+      gap: 35px;
+      align-items: start;
       background: var(--card-bg);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px var(--shadow);
+      border-radius: 16px;
+      padding: 30px 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
       position: relative;
-      margin: 0 30px;
     }
 
-    .timeline-content::before {
+    .timeline-item::before {
       content: '';
       position: absolute;
-      top: 20px;
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #4ade80, var(--accent));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      border-radius: 16px 16px 0 0;
     }
 
-    .timeline-entry:nth-child(odd) .timeline-content::before {
-      left: -20px;
-      border-right-color: var(--card-bg);
+    .timeline-item:hover::before {
+      transform: scaleX(1);
     }
 
-    .timeline-entry:nth-child(even) .timeline-content::before {
-      right: -20px;
-      border-left-color: var(--card-bg);
+    .timeline-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px var(--shadow);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
     .timeline-date {
-      font-weight: bold;
+      font-size: 0.95rem;
+      font-weight: 700;
       color: var(--accent);
-      margin-bottom: 10px;
-      font-size: 1.1rem;
+      line-height: 1.5;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      position: relative;
+      padding-left: 20px;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 2px;
+    }
+
+    .timeline-date::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px var(--accent), 0 0 12px rgba(88, 166, 255, 0.4);
+      flex-shrink: 0;
     }
 
     .timeline-title {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
+      font-size: 1.25rem;
+      font-weight: 700;
       color: var(--text-color);
+      line-height: 1.3;
+      margin: 0;
     }
 
     .timeline-company {
+      font-size: 1rem;
       color: var(--text-color);
-      opacity: 0.7;
-      margin-bottom: 15px;
+      opacity: 0.85;
+      line-height: 1.5;
+      margin: 0;
+      font-weight: 500;
       font-style: italic;
     }
 
     .timeline-description {
       color: var(--text-color);
-      line-height: 1.6;
+      line-height: 1.7;
+      margin: 0;
     }
 
-    .timeline-entry::before {
-      content: '';
+    .timeline-description p {
+      margin-bottom: 10px;
+      opacity: 0.9;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .timeline-description p:last-child {
+      margin-bottom: 0;
+    }
+
+    .github-link {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .github-link a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      word-break: break-all;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .github-link a::before {
+      content: '🔗';
+      font-size: 0.85rem;
+    }
+
+    .github-link a:hover {
+      color: var(--text-color);
+      text-decoration: underline;
+      transform: translateX(3px);
+    }
+
+    .timeline-separator {
+      max-width: 900px;
+      margin: 0 auto 30px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.3;
+      position: relative;
+    }
+
+    .timeline-separator::before {
+      content: '◆';
       position: absolute;
       left: 50%;
-      top: 30px;
-      transform: translateX(-50%);
-      width: 16px;
-      height: 16px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--bg-color);
+      color: var(--accent);
+      padding: 0 12px;
+      font-size: 0.7rem;
+    }
+
+    /* Timeline Column Headers */
+    .timeline-header {
+      display: grid;
+      grid-template-columns: 160px 1fr 1fr 1.6fr;
+      gap: 35px;
+      padding: 0 40px;
+      margin-bottom: 25px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-size: 0.85rem;
+    }
+
+    .timeline-header span {
+      padding: 12px 0;
+      border-bottom: 2px solid var(--accent);
+      text-align: center;
+    }
+
+    .timeline-header span:first-child {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    /* Timeline Entry Wrapper */
+    .timeline-entry {
+      position: relative;
+    }
+
+    .timeline-entry::after {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
       background: var(--accent);
       border-radius: 50%;
-      border: 4px solid var(--bg-color);
-      z-index: 1;
+      box-shadow: 0 0 0 3px var(--bg-color), 0 0 0 5px var(--accent), 0 0 15px rgba(88, 166, 255, 0.5);
+      z-index: 2;
     }
 
     /* Timeline Edit Functionality */
@@ -5070,39 +4499,6 @@
     #load-more-projects {
       display: block;
       margin: 0 auto;
-    }
-
-    /* Testimonials */
-    .testimonial-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .testimonial-card {
-      background: var(--card-bg);
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px var(--shadow);
-      text-align: center;
-    }
-
-    .testimonial-photo img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-
-    .testimonial-content p {
-      font-style: italic;
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-    }
-
-    .testimonial-content h4 {
-      margin-bottom: 5px;
-      color: var(--accent);
     }
 
     /* Blog Section */
@@ -5956,79 +5352,6 @@
       transform: translateX(5px);
     }
 
-    /* Testimonials Carousel */
-    .testimonials-carousel {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 15px;
-    }
-
-    .testimonials-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .testimonial-slide {
-      min-width: 100%;
-      background: var(--card-bg);
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 5px 20px var(--shadow);
-    }
-
-    .carousel-controls {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .carousel-btn {
-      width: 50px;
-      height: 50px;
-      border: none;
-      border-radius: 50%;
-      background: var(--accent);
-      color: white;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .carousel-btn:hover {
-      background: var(--text-color);
-      transform: scale(1.1);
-    }
-
-    .carousel-btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .carousel-indicators {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .indicator {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--shadow);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .indicator.active {
-      background: var(--accent);
-      transform: scale(1.2);
-    }
 
     /* Location Display */
     .location-info {
@@ -6172,43 +5495,58 @@
         gap: 10px;
       }
 
-      .timeline::before {
-        left: 20px;
+      .simple-timeline {
+        padding: 40px 20px;
+      }
+
+      .timeline-header {
+        display: none;
       }
 
       .timeline-item {
-        flex-direction: column !important;
-        padding-left: 40px;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 22px 18px;
+        margin-bottom: 20px;
       }
 
       .timeline-item::before {
-        left: 14px !important;
-      }
-
-      .timeline-item .year {
-        text-align: left;
-        padding: 10px 0;
-      }
-
-      .career-timeline::before {
-        left: 20px;
-      }
-
-      .timeline-entry {
-        flex-direction: column !important;
-        padding-left: 50px;
-      }
-
-      .timeline-entry::before {
-        left: 14px !important;
-      }
-
-      .timeline-content {
-        margin: 0;
-      }
-
-      .timeline-content::before {
         display: none;
+      }
+
+      .timeline-date {
+        font-size: 0.95rem;
+        padding-left: 0;
+        text-align: center;
+        padding-top: 0;
+        order: -1;
+        justify-content: center;
+      }
+
+      .timeline-date::before {
+        display: none;
+      }
+
+      .timeline-title {
+        font-size: 1.15rem;
+        text-align: center;
+      }
+
+      .timeline-company {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      .timeline-description {
+        font-size: 0.9rem;
+      }
+
+      .timeline-description p {
+        margin-bottom: 10px;
+      }
+
+      .timeline-separator {
+        margin-bottom: 20px;
       }
 
       .footer-content {
@@ -6249,6 +5587,34 @@
       input, textarea {
         padding: 12px 15px;
         font-size: 15px;
+      }
+
+      .simple-timeline {
+        padding: 30px 15px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 18px 15px;
+        margin-bottom: 18px;
+        border-radius: 14px;
+      }
+
+      .timeline-title {
+        font-size: 1.05rem;
+      }
+
+      .timeline-company {
+        font-size: 0.9rem;
+      }
+
+      .timeline-description {
+        font-size: 0.85rem;
+      }
+
+      .timeline-description p {
+        margin-bottom: 8px;
       }
     }
 
@@ -8453,7 +7819,6 @@
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#timeline">Timeline</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -8587,7 +7952,7 @@
     <div class="cv-download-section">
       <h3>Download My Resume</h3>
       <div class="cv-buttons">
-        <a href="resources/resume.pdf" class="cv-btn" download="Rabby_Zil_Jalal_Kanon_Resume.pdf" id="download-pdf">
+        <a href="resources/Rabby_Zil_Jalal_Kanon_CV .pdf" class="cv-btn" download="Rabby_Zil_Jalal_Kanon_Resume.pdf" id="download-pdf">
           <span>📄</span>
           <span>Download PDF</span>
         </a>
@@ -8699,100 +8064,53 @@
   <!-- Career Timeline Section -->
   <section class="timeline-section reveal" id="timeline">
     <h2 data-translate="career-journey">Career Journey</h2>
-    <div class="career-timeline">
-      <div class="timeline-entry" data-timeline-id="timeline-1">
-        <div class="timeline-edit-controls">
-          <button class="timeline-edit-btn" onclick="editTimelineEntry('timeline-1')">✏️ Edit</button>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-editable-field" data-field="date">
-            <div class="timeline-date">2024 - Present</div>
-          </div>
-          <div class="timeline-editable-field" data-field="title">
-            <h3 class="timeline-title" data-translate="freelance-developer">Freelance Developer</h3>
-          </div>
-          <div class="timeline-editable-field" data-field="company">
-            <p class="timeline-company" data-translate="self-employed">Self-Employed</p>
-          </div>
-          <div class="timeline-editable-field" data-field="description">
-            <p class="timeline-description" data-translate="freelance-desc">Working on various web development projects, specializing in modern JavaScript frameworks and responsive design.</p>
-          </div>
+    <div class="simple-timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2025 - 2026</div>
+        <div class="timeline-title">Research</div>
+        <div class="timeline-company">University Research</div>
+        <div class="timeline-description">
+          <p>Developed machine learning models for sensor data classification, achieving 95% accuracy with CNN implementations.</p>
+          <p>Evaluating the Generalization of Flow-Based VPN Traffic Classification under Leakage-Resistant Data Splits</p>
+          <p>Causal Domain Adaptation for Distinguishing Benign Operational Drift from Adversarial Process Drift in Cross-Plant Industrial Control Systems</p>
         </div>
       </div>
-      <div class="timeline-entry" data-timeline-id="timeline-2">
-        <div class="timeline-edit-controls">
-          <button class="timeline-edit-btn" onclick="editTimelineEntry('timeline-2')">✏️ Edit</button>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-editable-field" data-field="date">
-            <div class="timeline-date">2023 - 2024</div>
-          </div>
-          <div class="timeline-editable-field" data-field="title">
-            <h3 class="timeline-title" data-translate="ai-research-intern">AI Research Intern</h3>
-          </div>
-          <div class="timeline-editable-field" data-field="company">
-            <p class="timeline-company" data-translate="university-lab">University Research Lab</p>
-          </div>
-          <div class="timeline-editable-field" data-field="description">
-            <p class="timeline-description" data-translate="ai-research-desc">Developed machine learning models for sensor data classification, achieving 95% accuracy with CNN implementations.</p>
-          </div>
+      
+      <div class="timeline-separator"></div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2024 - 2025</div>
+        <div class="timeline-title">University Project Competition</div>
+        <div class="timeline-company">University Research Lab</div>
+        <div class="timeline-description">
+          <p>4C Competition</p>
+          <p>STITP Competition-2025</p>
+          <p>STITP Competition-2026</p>
+          <p>Visit my GitHub: <a href="https://github.com/Rabbyziljalal" target="_blank" rel="noopener noreferrer">https://github.com/Rabbyziljalal</a></p>
         </div>
       </div>
-      <div class="timeline-entry" data-timeline-id="timeline-3">
-        <div class="timeline-edit-controls">
-          <button class="timeline-edit-btn" onclick="editTimelineEntry('timeline-3')">✏️ Edit</button>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-editable-field" data-field="date">
-            <div class="timeline-date">2022 - 2023</div>
-          </div>
-          <div class="timeline-editable-field" data-field="title">
-            <h3 class="timeline-title" data-translate="web-dev-intern">Web Development Intern</h3>
-          </div>
-          <div class="timeline-editable-field" data-field="company">
-            <p class="timeline-company" data-translate="tech-startup">Local Tech Startup</p>
-          </div>
-          <div class="timeline-editable-field" data-field="description">
-            <p class="timeline-description" data-translate="web-dev-desc">Built responsive websites and gained experience with modern development tools and collaborative workflows.</p>
-          </div>
+      
+      <div class="timeline-separator"></div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2023 - 2024</div>
+        <div class="timeline-title">Web Development</div>
+        <div class="timeline-company">Local Tech Startup</div>
+        <div class="timeline-description">
+          <p>Built responsive websites and gained experience with modern development tools and collaborative workflows.</p>
         </div>
       </div>
-      <div class="timeline-entry" data-timeline-id="timeline-4">
-        <div class="timeline-edit-controls">
-          <button class="timeline-edit-btn" onclick="editTimelineEntry('timeline-4')">✏️ Edit</button>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-editable-field" data-field="date">
-            <div class="timeline-date">2022</div>
-          </div>
-          <div class="timeline-editable-field" data-field="title">
-            <h3 class="timeline-title" data-translate="started-university">Started University</h3>
-          </div>
-          <div class="timeline-editable-field" data-field="company">
-            <p class="timeline-company" data-translate="computer-science">Computer Science Program</p>
-          </div>
-          <div class="timeline-editable-field" data-field="description">
-            <p class="timeline-description" data-translate="university-desc">Began Bachelor's degree in Computer Science, focusing on software engineering and artificial intelligence.</p>
-          </div>
+      
+      <div class="timeline-separator"></div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-title">Started University</div>
+        <div class="timeline-company">Computer Science Program</div>
+        <div class="timeline-description">
+          <p>Began Bachelor's degree in Computer Science, focusing on software engineering and artificial intelligence.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials reveal-right" id="testimonials">
-    <h2 data-translate="testimonials">Testimonials</h2>
-    <div class="testimonials-carousel">
-      <div class="testimonials-track" id="testimonials-track">
-        <!-- Testimonial slides will be populated by JavaScript -->
-      </div>
-    </div>
-    <div class="carousel-controls">
-      <button class="carousel-btn" id="prev-btn">❮</button>
-      <button class="carousel-btn" id="next-btn">❯</button>
-    </div>
-    <div class="carousel-indicators" id="carousel-indicators">
-      <!-- Indicators will be populated by JavaScript -->
     </div>
   </section>
 
@@ -8994,6 +8312,10 @@
   <!-- Supabase Configuration & Database Layer -->
   <script src="supabase-config.js"></script>
   
+  <!-- Supabase Injector (overrides save/load functions for cloud persistence) 
+       Loaded BEFORE main script so overrides are ready before DOMContentLoaded -->
+  <script src="supabase-injector.js"></script>
+  
   <!-- JavaScript -->
   <script>
     // Typing Effect for Hero Section - Enhanced Version
@@ -9124,7 +8446,7 @@
         return customPublicUrl;
       }
       // Fall back to the default resume PDF URL
-      return 'https://rabbyziljalal.github.io/website/resources/resume.pdf';
+      return 'https://rabbyziljalal.github.io/website/resources/Rabby_Zil_Jalal_Kanon_CV%20.pdf';
     }
 
     // Admin function to set the public URL for the uploaded CV
@@ -11419,127 +10741,6 @@ This message was sent from your portfolio contact form.`;
       educationSection.appendChild(certificationsContainer);
     }
 
-    // Testimonials Carousel
-    const testimonialsData = [
-      {
-        name: "John Doe",
-        position: "Project Manager",
-        image: "resources/image/person1.jpg",
-        text: "Rabby is an excellent developer with great attention to detail. His work on our project exceeded expectations."
-      },
-      {
-        name: "Jane Smith",
-        position: "Senior Developer",
-        image: "resources/image/person2.jpg",
-        text: "Working with Rabby was a pleasure. His problem-solving skills and dedication make him stand out."
-      },
-      {
-        name: "Ahmed Rahman",
-        position: "Tech Lead",
-        image: "resources/image/person3.jpg",
-        text: "Rabby's innovative approach to AI and web development delivered outstanding results for our startup."
-      },
-      {
-        name: "Li Wei",
-        position: "University Professor",
-        image: "resources/image/person4.jpg",
-        text: "One of the most promising students I've taught. Rabby combines technical skill with creative thinking."
-      },
-      {
-        name: "Sarah Johnson",
-        position: "Client",
-        image: "resources/image/person5.jpg",
-        text: "Professional, reliable, and delivered exactly what we needed. Highly recommend Rabby's services."
-      }
-    ];
-
-    let currentTestimonial = 0;
-    let testimonialInterval;
-
-    function initTestimonialsCarousel() {
-      const track = document.getElementById('testimonials-track');
-      const indicators = document.getElementById('carousel-indicators');
-      const prevBtn = document.getElementById('prev-btn');
-      const nextBtn = document.getElementById('next-btn');
-      
-      // Create testimonial slides
-      track.innerHTML = testimonialsData.map(testimonial => `
-        <div class="testimonial-slide">
-          <div class="testimonial-photo">
-            <img src="${testimonial.image}" alt="${testimonial.name}" 
-                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiNFNUU3RUIiLz4KPHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSI+CjxjaXJjbGUgY3g9IjMwIiBjeT0iMjQiIHI9IjgiIGZpbGw9IiM5Q0EzQUYiLz4KPHBhdGggZD0iTTQ2IDQ2QzQ2IDM3LjE2MzQgMzguODM2NiAzMCAzMCAzMEMyMS4xNjM0IDMwIDEzIDM3LjE2MzQgMTMgNDZINDZaIiBmaWxsPSIjOUNBM0FGIi8+Cjwvc3ZnPgo8L3N2Zz4K'"/>
-          </div>
-          <div class="testimonial-content">
-            <p>"${testimonial.text}"</p>
-            <h4>${testimonial.name}</h4>
-            <span>${testimonial.position}</span>
-          </div>
-        </div>
-      `).join('');
-      
-      // Create indicators
-      indicators.innerHTML = testimonialsData.map((_, index) => 
-        `<span class="indicator ${index === 0 ? 'active' : ''}" data-slide="${index}"></span>`
-      ).join('');
-      
-      // Event listeners
-      prevBtn.addEventListener('click', () => changeTestimonial('prev'));
-      nextBtn.addEventListener('click', () => changeTestimonial('next'));
-      
-      // Indicator clicks
-      indicators.addEventListener('click', (e) => {
-        if (e.target.classList.contains('indicator')) {
-          const slideIndex = parseInt(e.target.dataset.slide);
-          goToTestimonial(slideIndex);
-        }
-      });
-      
-      // Auto-play
-      startTestimonialAutoPlay();
-      
-      // Pause on hover
-      const carousel = document.querySelector('.testimonials-carousel');
-      carousel.addEventListener('mouseenter', stopTestimonialAutoPlay);
-      carousel.addEventListener('mouseleave', startTestimonialAutoPlay);
-    }
-
-    function changeTestimonial(direction) {
-      if (direction === 'next') {
-        currentTestimonial = (currentTestimonial + 1) % testimonialsData.length;
-      } else {
-        currentTestimonial = (currentTestimonial - 1 + testimonialsData.length) % testimonialsData.length;
-      }
-      updateTestimonialDisplay();
-    }
-
-    function goToTestimonial(index) {
-      currentTestimonial = index;
-      updateTestimonialDisplay();
-    }
-
-    function updateTestimonialDisplay() {
-      const track = document.getElementById('testimonials-track');
-      const indicators = document.querySelectorAll('.indicator');
-      
-      track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
-      
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentTestimonial);
-      });
-    }
-
-    function startTestimonialAutoPlay() {
-      stopTestimonialAutoPlay();
-      testimonialInterval = setInterval(() => {
-        changeTestimonial('next');
-      }, 5000);
-    }
-
-    function stopTestimonialAutoPlay() {
-      if (testimonialInterval) {
-        clearInterval(testimonialInterval);
-      }
-    }
 
     // Floating Contact Button
     function initFloatingContact() {
@@ -13027,58 +12228,6 @@ This message was sent from your portfolio contact form.`;
       });
     }
 
-    // Testimonials Interface Functions
-    function openTestimonialsInterface() {
-      const testimonialsInterface = document.getElementById('testimonialsInterface');
-      testimonialsInterface.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
-
-    function closeTestimonialsInterface() {
-      const testimonialsInterface = document.getElementById('testimonialsInterface');
-      testimonialsInterface.classList.remove('active');
-      document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-
-    function switchTestimonialsTab(tabName) {
-      // Remove active class from all tabs and content
-      const tabs = document.querySelectorAll('.testimonials-tab');
-      const contents = document.querySelectorAll('.testimonials-tab-content');
-      
-      tabs.forEach(tab => tab.classList.remove('active'));
-      contents.forEach(content => content.classList.remove('active'));
-      
-      // Add active class to selected tab and content
-      event.target.classList.add('active');
-      document.getElementById('testimonials-' + tabName).classList.add('active');
-    }
-
-    // Enhanced Testimonials Link Functionality
-    function initTestimonialsInterface() {
-      // Find all testimonials links and add click handlers
-      const testimonialsLinks = document.querySelectorAll('a[href="#testimonials"]');
-      testimonialsLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          openTestimonialsInterface();
-        });
-      });
-      
-      // Close on escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          closeTestimonialsInterface();
-        }
-      });
-      
-      // Close on backdrop click
-      const testimonialsInterface = document.getElementById('testimonialsInterface');
-      testimonialsInterface.addEventListener('click', function(e) {
-        if (e.target === testimonialsInterface) {
-          closeTestimonialsInterface();
-        }
-      });
-    }
 
     // Hamburger Menu Functions
     function initHamburgerMenu() {
@@ -13643,6 +12792,14 @@ This message was sent from your portfolio contact form.`;
           // Store in localStorage
           try {
             localStorage.setItem('portfolioAdminCV', cvData);
+            // Also save to Supabase if available
+            if (window.SupabaseDB && window.SupabaseDB.saveCV) {
+              window.SupabaseDB.saveCV(cvData).then(result => {
+                console.log('[CV Upload] Supabase save:', result.success ? 'success' : 'failed');
+              }).catch(err => {
+                console.warn('[CV Upload] Supabase save error:', err.message);
+              });
+            }
             
             // Complete progress
             clearInterval(progressInterval);
@@ -13653,6 +12810,8 @@ This message was sent from your portfolio contact form.`;
             // Update the download link
             updateDownloadLink(cvData);
             
+            console.log('%c[CV Upload] CV uploaded and stored successfully', 'color: #4caf50; font-weight: bold;');
+            console.log('[CV Upload] CV data length:', cvData.length, 'characters');
             showNotification('✅ CV uploaded successfully!', 'success');
             if (typeof soundManager !== 'undefined') soundManager.playSuccess();
             
@@ -13671,6 +12830,7 @@ This message was sent from your portfolio contact form.`;
             progressContainer.classList.remove('show');
             statusText.textContent = '❌ Failed to store CV. Storage may be full.';
             statusText.style.color = '#ef4444';
+            console.error('[CV Upload] Storage error:', storageError.message);
             showNotification('❌ Failed to upload CV. Storage may be limited.', 'error');
           }
         };
@@ -13681,6 +12841,7 @@ This message was sent from your portfolio contact form.`;
           progressContainer.classList.remove('show');
           statusText.textContent = '❌ Failed to read file.';
           statusText.style.color = '#ef4444';
+          console.error('[CV Upload] FileReader error:', reader.error);
           showNotification('❌ Failed to read the file.', 'error');
         };
         
@@ -13711,7 +12872,7 @@ This message was sent from your portfolio contact form.`;
       // Reset download link back to default
       const downloadLink = document.getElementById('download-pdf');
       if (downloadLink) {
-        downloadLink.href = 'resources/resume.pdf';
+        downloadLink.href = 'resources/Rabby_Zil_Jalal_Kanon_CV .pdf';
       }
       
       // Show status
@@ -16579,637 +15740,6 @@ This message was sent from your portfolio contact form.`;
       if (labelElement && data.label) labelElement.textContent = data.label;
     }
 
-    // Testimonial Edit Functions
-    let currentEditingTestimonialId = null;
-
-    function editTestimonial(testimonialId) {
-      // Require admin authentication for testimonial editing
-      if (!promptAdminPassword('edit testimonial information')) {
-        return;
-      }
-
-      // Prevent multiple edits
-      if (currentEditingTestimonialId && currentEditingTestimonialId !== testimonialId) {
-        showEditStatus('Please complete current edit before starting another.', 'warning');
-        return;
-      }
-
-      const testimonialCard = document.querySelector(`[data-testimonial-id="${testimonialId}"]`);
-      if (!testimonialCard) return;
-
-      currentEditingTestimonialId = testimonialId;
-
-      // Add edit mode styling
-      testimonialCard.classList.add('testimonial-edit-mode');
-
-      // Convert elements to editable inputs
-      convertTestimonialElementsToInputs(testimonialCard);
-
-      // Update edit controls
-      updateTestimonialEditControls(testimonialCard, true);
-
-      showEditStatus('Edit mode enabled for testimonial', 'info');
-      
-      // Extend admin session since editing was successful
-      extendAdminSession();
-    }
-
-    function editTestimonialStat(statId) {
-      // Require admin authentication for testimonial stat editing
-      if (!promptAdminPassword('edit testimonial statistics')) {
-        return;
-      }
-
-      // Prevent multiple edits
-      if (currentEditingTestimonialId && currentEditingTestimonialId !== statId) {
-        showEditStatus('Please complete current edit before starting another.', 'warning');
-        return;
-      }
-
-      const statElement = document.querySelector(`[data-testimonial-stat-id="${statId}"]`);
-      if (!statElement) return;
-
-      currentEditingTestimonialId = statId;
-
-      // Add edit mode styling
-      statElement.classList.add('testimonial-stat-edit-mode');
-
-      // Convert elements to editable inputs
-      convertTestimonialStatElementsToInputs(statElement);
-
-      // Update edit controls
-      updateTestimonialStatEditControls(statElement, true);
-
-      showEditStatus('Edit mode enabled for testimonial stat', 'info');
-      
-      // Extend admin session since editing was successful
-      extendAdminSession();
-    }
-
-    function convertTestimonialElementsToInputs(testimonialCard) {
-      const fields = testimonialCard.querySelectorAll('.testimonial-editable-field');
-      
-      fields.forEach(field => {
-        const fieldType = field.getAttribute('data-field');
-        field.classList.add('editing');
-        
-        switch(fieldType) {
-          case 'avatar':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'name':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'position':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'company':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'text':
-            convertTestimonialElementToTextarea(field, field.textContent.trim());
-            break;
-          case 'project-title':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'project-desc':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'date':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'rating':
-            convertTestimonialRatingToInput(field);
-            break;
-          case 'tags':
-            convertTestimonialTagsToInputs(field);
-            break;
-          case 'icon':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'count':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-        }
-      });
-    }
-
-    function convertTestimonialStatElementsToInputs(statElement) {
-      const fields = statElement.querySelectorAll('.testimonial-stat-editable-field');
-      
-      fields.forEach(field => {
-        const fieldType = field.getAttribute('data-field');
-        field.classList.add('editing');
-        
-        switch(fieldType) {
-          case 'number':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-          case 'label':
-            convertTestimonialElementToInput(field, 'input', field.textContent.trim());
-            break;
-        }
-      });
-    }
-
-    function convertTestimonialElementToInput(element, inputType, value) {
-      const input = document.createElement(inputType);
-      input.className = 'testimonial-edit-input';
-      input.value = value;
-      
-      // Store original content and classes
-      const originalContent = element.innerHTML;
-      const originalClasses = element.className;
-      element.dataset.originalContent = originalContent;
-      element.dataset.originalClasses = originalClasses;
-      
-      // Clear element and add input
-      element.innerHTML = '';
-      element.appendChild(input);
-      
-      // Focus on input
-      input.focus();
-    }
-
-    function convertTestimonialElementToTextarea(element, value) {
-      const textarea = document.createElement('textarea');
-      textarea.className = 'testimonial-edit-textarea';
-      textarea.value = value;
-      
-      // Store original content and classes
-      const originalContent = element.innerHTML;
-      const originalClasses = element.className;
-      element.dataset.originalContent = originalContent;
-      element.dataset.originalClasses = originalClasses;
-      
-      // Clear element and add textarea
-      element.innerHTML = '';
-      element.appendChild(textarea);
-      
-      // Auto-resize textarea
-      textarea.style.height = 'auto';
-      textarea.style.height = textarea.scrollHeight + 'px';
-      
-      // Focus on textarea
-      textarea.focus();
-    }
-
-    function convertTestimonialRatingToInput(element) {
-      const stars = element.querySelectorAll('.star');
-      const currentRating = stars.length;
-      
-      const input = document.createElement('input');
-      input.type = 'number';
-      input.min = '1';
-      input.max = '5';
-      input.className = 'testimonial-edit-input';
-      input.value = currentRating;
-      input.style.width = '60px';
-      
-      // Store original content
-      element.dataset.originalContent = element.innerHTML;
-      element.dataset.originalClasses = element.className;
-      
-      // Clear element and add input
-      element.innerHTML = '';
-      element.appendChild(input);
-      
-      input.focus();
-    }
-
-    function convertTestimonialTagsToInputs(element) {
-      const tags = element.querySelectorAll('.testimonial-tag');
-      const tagValues = Array.from(tags).map(tag => tag.textContent.trim());
-      
-      // Store original content
-      element.dataset.originalContent = element.innerHTML;
-      element.dataset.originalClasses = element.className;
-      
-      // Clear element
-      element.innerHTML = '';
-      
-      // Add input for each tag
-      tagValues.forEach((tagValue, index) => {
-        const input = document.createElement('input');
-        input.className = 'testimonial-edit-input testimonial-tag-input';
-        input.value = tagValue;
-        input.placeholder = 'Tag name';
-        element.appendChild(input);
-        
-        if (index === 0) input.focus();
-      });
-      
-      // Add button to add more tags
-      const addTagBtn = document.createElement('button');
-      addTagBtn.textContent = '+ Add Tag';
-      addTagBtn.className = 'testimonial-edit-btn';
-      addTagBtn.style.fontSize = '0.7rem';
-      addTagBtn.onclick = (e) => {
-        e.preventDefault();
-        const newInput = document.createElement('input');
-        newInput.className = 'testimonial-edit-input testimonial-tag-input';
-        newInput.placeholder = 'New tag';
-        element.insertBefore(newInput, addTagBtn);
-        newInput.focus();
-      };
-      element.appendChild(addTagBtn);
-    }
-
-    function updateTestimonialEditControls(testimonialCard, isEditing) {
-      const editControls = testimonialCard.querySelector('.testimonial-edit-controls');
-      if (!editControls) return;
-      
-      if (isEditing) {
-        editControls.innerHTML = `
-          <button class="testimonial-save-btn" onclick="saveTestimonialEdit('${testimonialCard.dataset.testimonialId}')">Save</button>
-          <button class="testimonial-cancel-btn" onclick="cancelTestimonialEdit('${testimonialCard.dataset.testimonialId}')">Cancel</button>
-        `;
-      } else {
-        editControls.innerHTML = `
-          <button class="testimonial-edit-btn" onclick="editTestimonial('${testimonialCard.dataset.testimonialId}')">Edit</button>
-        `;
-      }
-    }
-
-    function updateTestimonialStatEditControls(statElement, isEditing) {
-      const editControls = statElement.querySelector('.testimonial-edit-controls');
-      if (!editControls) return;
-      
-      const statId = statElement.dataset.testimonialStatId;
-      
-      if (isEditing) {
-        editControls.innerHTML = `
-          <button class="testimonial-save-btn" onclick="saveTestimonialStat('${statId}')">Save</button>
-          <button class="testimonial-cancel-btn" onclick="cancelTestimonialStat('${statId}')">Cancel</button>
-        `;
-      } else {
-        editControls.innerHTML = `
-          <button class="testimonial-edit-btn" onclick="editTestimonialStat('${statId}')">Edit</button>
-        `;
-      }
-    }
-
-    function saveTestimonialEdit(testimonialId) {
-      // Verify admin authentication for saving testimonial changes
-      if (!checkAdminAuth()) {
-        showEditStatus('Authentication expired. Please re-authenticate to save changes.', 'error');
-        return;
-      }
-
-      const testimonialCard = document.querySelector(`[data-testimonial-id="${testimonialId}"]`);
-      const fields = testimonialCard.querySelectorAll('.testimonial-editable-field');
-      
-      const testimonialData = {};
-      
-      fields.forEach(field => {
-        const fieldType = field.getAttribute('data-field');
-        
-        if (fieldType === 'rating') {
-          const input = field.querySelector('input');
-          testimonialData[fieldType] = parseInt(input.value) || 5;
-        } else if (fieldType === 'tags') {
-          const inputs = field.querySelectorAll('.testimonial-tag-input');
-          testimonialData[fieldType] = Array.from(inputs)
-            .map(input => input.value.trim())
-            .filter(value => value.length > 0);
-        } else {
-          const input = field.querySelector('input, textarea');
-          testimonialData[fieldType] = input.value.trim();
-        }
-      });
-      
-      // Convert inputs back to display elements
-      convertTestimonialInputsToElements(testimonialCard, testimonialData);
-      
-      // Remove edit mode styling
-      testimonialCard.classList.remove('testimonial-edit-mode');
-      
-      // Update edit controls
-      updateTestimonialEditControls(testimonialCard, false);
-      
-      // Save to localStorage
-      saveTestimonialDataToStorage(testimonialId, testimonialData);
-      
-      // Reset editing state
-      currentEditingTestimonialId = null;
-      
-      showEditStatus('Testimonial saved successfully!', 'success');
-      
-      // Extend admin session after successful save
-      extendAdminSession();
-    }
-
-    function saveTestimonialStat(statId) {
-      // Verify admin authentication for saving testimonial stat changes
-      if (!checkAdminAuth()) {
-        showEditStatus('Authentication expired. Please re-authenticate to save changes.', 'error');
-        return;
-      }
-
-      const statElement = document.querySelector(`[data-testimonial-stat-id="${statId}"]`);
-      const fields = statElement.querySelectorAll('.testimonial-stat-editable-field');
-      
-      const statData = {};
-      
-      fields.forEach(field => {
-        const fieldType = field.getAttribute('data-field');
-        const input = field.querySelector('input');
-        statData[fieldType] = input.value.trim();
-      });
-      
-      // Convert inputs back to display elements
-      convertTestimonialStatInputsToElements(statElement, statData);
-      
-      // Remove edit mode styling
-      statElement.classList.remove('testimonial-stat-edit-mode');
-      
-      // Update edit controls
-      updateTestimonialStatEditControls(statElement, false);
-      
-      // Save to localStorage
-      saveTestimonialStatDataToStorage(statId, statData);
-      
-      // Reset editing state
-      currentEditingTestimonialId = null;
-      
-      showEditStatus('Testimonial stat saved successfully!', 'success');
-      
-      // Extend admin session after successful save
-      extendAdminSession();
-    }
-
-    function convertTestimonialInputsToElements(testimonialCard, data) {
-      const fields = testimonialCard.querySelectorAll('.testimonial-editable-field');
-      
-      fields.forEach(field => {
-        const fieldType = field.getAttribute('data-field');
-        field.classList.remove('editing');
-        
-        switch(fieldType) {
-          case 'avatar':
-          case 'name':
-          case 'position':
-          case 'company':
-          case 'project-title':
-          case 'project-desc':
-          case 'date':
-          case 'icon':
-          case 'count':
-            field.textContent = data[fieldType] || '';
-            break;
-          case 'text':
-            field.textContent = data[fieldType] || '';
-            break;
-          case 'rating':
-            convertTestimonialRatingInputToStars(field, data[fieldType]);
-            break;
-          case 'tags':
-            convertTestimonialTagInputsToElements(field, data[fieldType]);
-            break;
-        }
-        
-        // Restore original classes
-        if (field.dataset.originalClasses) {
-          field.className = field.dataset.originalClasses;
-          delete field.dataset.originalClasses;
-          delete field.dataset.originalContent;
-        }
-      });
-    }
-
-    function convertTestimonialStatInputsToElements(statElement, data) {
-      const fields = statElement.querySelectorAll('.testimonial-stat-editable-field');
-      
-      fields.forEach(field => {
-        const fieldType = field.getAttribute('data-field');
-        field.classList.remove('editing');
-        field.textContent = data[fieldType] || '';
-        
-        // Restore original classes
-        if (field.dataset.originalClasses) {
-          field.className = field.dataset.originalClasses;
-          delete field.dataset.originalClasses;
-          delete field.dataset.originalContent;
-        }
-      });
-    }
-
-    function convertTestimonialRatingInputToStars(element, rating) {
-      element.innerHTML = '';
-      const starCount = Math.max(1, Math.min(5, parseInt(rating) || 5));
-      
-      for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('span');
-        star.className = 'star';
-        star.textContent = '★';
-        element.appendChild(star);
-      }
-    }
-
-    function convertTestimonialTagInputsToElements(element, tags) {
-      element.innerHTML = '';
-      
-      if (tags && Array.isArray(tags)) {
-        tags.forEach(tagText => {
-          if (tagText.trim()) {
-            const tag = document.createElement('span');
-            tag.className = 'testimonial-tag';
-            tag.textContent = tagText.trim();
-            element.appendChild(tag);
-          }
-        });
-      }
-    }
-
-    function cancelTestimonialEdit(testimonialId) {
-      // Verify admin authentication for canceling testimonial edits
-      if (!checkAdminAuth()) {
-        showEditStatus('Authentication expired. Cannot cancel edit.', 'error');
-        return;
-      }
-
-      const testimonialCard = document.querySelector(`[data-testimonial-id="${testimonialId}"]`);
-      const fields = testimonialCard.querySelectorAll('.testimonial-editable-field');
-      
-      // Restore original content
-      fields.forEach(field => {
-        if (field.dataset.originalContent) {
-          field.innerHTML = field.dataset.originalContent;
-          field.className = field.dataset.originalClasses;
-          delete field.dataset.originalContent;
-          delete field.dataset.originalClasses;
-        }
-        field.classList.remove('editing');
-      });
-      
-      // Remove edit mode styling
-      testimonialCard.classList.remove('testimonial-edit-mode');
-      
-      // Update edit controls
-      updateTestimonialEditControls(testimonialCard, false);
-      
-      // Reset editing state
-      currentEditingTestimonialId = null;
-      
-      showEditStatus('Edit cancelled', 'info');
-      
-      // Extend admin session
-      extendAdminSession();
-    }
-
-    function cancelTestimonialStat(statId) {
-      // Verify admin authentication for canceling testimonial stat edits
-      if (!checkAdminAuth()) {
-        showEditStatus('Authentication expired. Cannot cancel edit.', 'error');
-        return;
-      }
-
-      const statElement = document.querySelector(`[data-testimonial-stat-id="${statId}"]`);
-      const fields = statElement.querySelectorAll('.testimonial-stat-editable-field');
-      
-      // Restore original content
-      fields.forEach(field => {
-        if (field.dataset.originalContent) {
-          field.innerHTML = field.dataset.originalContent;
-          field.className = field.dataset.originalClasses;
-          delete field.dataset.originalContent;
-          delete field.dataset.originalClasses;
-        }
-        field.classList.remove('editing');
-      });
-      
-      // Remove edit mode styling
-      statElement.classList.remove('testimonial-stat-edit-mode');
-      
-      // Update edit controls
-      updateTestimonialStatEditControls(statElement, false);
-      
-      // Reset editing state
-      currentEditingTestimonialId = null;
-      
-      showEditStatus('Edit cancelled', 'info');
-      
-      // Extend admin session
-      extendAdminSession();
-    }
-
-    function saveTestimonialDataToStorage(testimonialId, data) {
-      try {
-        const storageKey = `testimonial_${testimonialId}`;
-        localStorage.setItem(storageKey, JSON.stringify(data));
-      } catch (error) {
-        console.error('Error saving testimonial data to localStorage:', error);
-        showEditStatus('Error saving data. Please try again.', 'error');
-      }
-    }
-
-    function saveTestimonialStatDataToStorage(statId, data) {
-      try {
-        const storageKey = `testimonial_stat_${statId}`;
-        localStorage.setItem(storageKey, JSON.stringify(data));
-      } catch (error) {
-        console.error('Error saving testimonial stat data to localStorage:', error);
-        showEditStatus('Error saving data. Please try again.', 'error');
-      }
-    }
-
-    function loadTestimonialDataFromStorage() {
-      try {
-        // Load regular testimonial data
-        document.querySelectorAll('[data-testimonial-id]').forEach(testimonialCard => {
-          const testimonialId = testimonialCard.getAttribute('data-testimonial-id');
-          const storageKey = `testimonial_${testimonialId}`;
-          const savedData = localStorage.getItem(storageKey);
-          
-          if (savedData) {
-            const data = JSON.parse(savedData);
-            populateTestimonialCard(testimonialCard, data);
-          }
-        });
-
-        // Load testimonial stats data
-        document.querySelectorAll('[data-testimonial-stat-id]').forEach(statElement => {
-          const statId = statElement.getAttribute('data-testimonial-stat-id');
-          const storageKey = `testimonial_stat_${statId}`;
-          const savedData = localStorage.getItem(storageKey);
-          
-          if (savedData) {
-            const data = JSON.parse(savedData);
-            populateTestimonialStat(statElement, data);
-          }
-        });
-      } catch (error) {
-        console.error('Error loading testimonial data from localStorage:', error);
-      }
-    }
-
-    function populateTestimonialCard(testimonialCard, data) {
-      // Only update if we have actual saved data
-      if (!data || Object.keys(data).length === 0) {
-        return;
-      }
-      
-      // Update basic fields
-      Object.keys(data).forEach(fieldType => {
-        const field = testimonialCard.querySelector(`[data-field="${fieldType}"]`);
-        if (!field) return;
-        
-        switch(fieldType) {
-          case 'avatar':
-          case 'name':
-          case 'position':
-          case 'company':
-          case 'text':
-          case 'project-title':
-          case 'project-desc':
-          case 'date':
-          case 'icon':
-          case 'count':
-            if (data[fieldType]) field.textContent = data[fieldType];
-            break;
-          case 'rating':
-            if (data[fieldType]) {
-              const starCount = Math.max(1, Math.min(5, parseInt(data[fieldType]) || 5));
-              field.innerHTML = '';
-              for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('span');
-                star.className = 'star';
-                star.textContent = '★';
-                field.appendChild(star);
-              }
-            }
-            break;
-          case 'tags':
-            if (data[fieldType] && Array.isArray(data[fieldType])) {
-              field.innerHTML = '';
-              data[fieldType].forEach(tagText => {
-                if (tagText.trim()) {
-                  const tag = document.createElement('span');
-                  tag.className = 'testimonial-tag';
-                  tag.textContent = tagText.trim();
-                  field.appendChild(tag);
-                }
-              });
-            }
-            break;
-        }
-      });
-    }
-
-    function populateTestimonialStat(statElement, data) {
-      // Only update if we have actual saved data
-      if (!data || Object.keys(data).length === 0) {
-        return;
-      }
-      
-      // Update number
-      const numberElement = statElement.querySelector('.testimonials-stat-number');
-      if (numberElement && data.number) numberElement.textContent = data.number;
-      
-      // Update label
-      const labelElement = statElement.querySelector('.testimonials-stat-label');
-      if (labelElement && data.label) labelElement.textContent = data.label;
-    }
 
     // Blog Edit Functions
     let currentEditingBlogId = null;
@@ -17579,9 +16109,6 @@ This message was sent from your portfolio contact form.`;
       });
     }
   </script>
-  
-  <!-- Supabase Injector (overrides save/load functions for cloud persistence) -->
-  <script src="supabase-injector.js"></script>
 
   <!-- Admin Control Panel -->
   <div class="admin-panel" id="adminPanel">
@@ -20023,609 +18550,6 @@ This message was sent from your portfolio contact form.`;
     </div>
   </div>
 
-  <!-- Comprehensive Testimonials Interface -->
-  <div class="testimonials-interface" id="testimonialsInterface">
-    <div class="testimonials-interface-content">
-      <button class="testimonials-close-btn" onclick="closeTestimonialsInterface()">&times;</button>
-      
-      <div class="testimonials-interface-header">
-        <h1 class="testimonials-interface-title">Client Testimonials</h1>
-        <p class="testimonials-interface-subtitle">What clients and colleagues say about working with me</p>
-      </div>
-      
-      <div class="testimonials-tabs">
-        <button class="testimonials-tab active" onclick="switchTestimonialsTab('featured')">Featured</button>
-        <button class="testimonials-tab" onclick="switchTestimonialsTab('clients')">Clients</button>
-        <button class="testimonials-tab" onclick="switchTestimonialsTab('colleagues')">Colleagues</button>
-        <button class="testimonials-tab" onclick="switchTestimonialsTab('projects')">Project Reviews</button>
-        <button class="testimonials-tab" onclick="switchTestimonialsTab('mentees')">Mentees</button>
-      </div>
-      
-      <!-- Featured Testimonials Tab -->
-      <div id="testimonials-featured" class="testimonials-tab-content active">
-        <div class="testimonials-stats">
-          <div class="testimonials-stat-card" data-testimonial-stat-id="happy-clients">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonialStat('happy-clients')">Edit</button>
-            </div>
-            <div class="testimonials-stat-number testimonial-stat-editable-field" data-field="number">50+</div>
-            <div class="testimonials-stat-label testimonial-stat-editable-field" data-field="label">Happy Clients</div>
-          </div>
-          <div class="testimonials-stat-card" data-testimonial-stat-id="average-rating">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonialStat('average-rating')">Edit</button>
-            </div>
-            <div class="testimonials-stat-number testimonial-stat-editable-field" data-field="number">4.9/5</div>
-            <div class="testimonials-stat-label testimonial-stat-editable-field" data-field="label">Average Rating</div>
-          </div>
-          <div class="testimonials-stat-card" data-testimonial-stat-id="success-rate">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonialStat('success-rate')">Edit</button>
-            </div>
-            <div class="testimonials-stat-number testimonial-stat-editable-field" data-field="number">100%</div>
-            <div class="testimonials-stat-label testimonial-stat-editable-field" data-field="label">Project Success Rate</div>
-          </div>
-          <div class="testimonials-stat-card" data-testimonial-stat-id="repeat-clients">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonialStat('repeat-clients')">Edit</button>
-            </div>
-            <div class="testimonials-stat-number testimonial-stat-editable-field" data-field="number">25+</div>
-            <div class="testimonials-stat-label testimonial-stat-editable-field" data-field="label">Repeat Clients</div>
-          </div>
-        </div>
-
-        <div class="featured-testimonials">
-          <div class="featured-testimonial-card" data-testimonial-id="featured-1">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('featured-1')">Edit</button>
-            </div>
-            <div class="featured-testimonial-header">
-              <div class="featured-testimonial-avatar testimonial-editable-field" data-field="avatar">SM</div>
-              <div class="featured-testimonial-info">
-                <h3 class="testimonial-editable-field" data-field="name">Sarah Mitchell</h3>
-                <div class="position testimonial-editable-field" data-field="position">CTO</div>
-                <div class="company testimonial-editable-field" data-field="company">TechVision Solutions</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="featured-testimonial-text testimonial-editable-field" data-field="text">
-              "Working with this developer was exceptional. They delivered a complex e-commerce platform that exceeded our expectations. 
-              The attention to detail, communication throughout the project, and the final product quality were outstanding. 
-              Our sales increased by 150% within the first quarter after launch."
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">E-commerce Platform Development</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Full-stack web application with AI-powered recommendations</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">React</span>
-              <span class="testimonial-tag">Node.js</span>
-              <span class="testimonial-tag">AI Integration</span>
-              <span class="testimonial-tag">Payment Systems</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">Project completed: November 2024</div>
-          </div>
-          
-          <div class="featured-testimonial-card" data-testimonial-id="featured-2">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('featured-2')">Edit</button>
-            </div>
-            <div class="featured-testimonial-header">
-              <div class="featured-testimonial-avatar testimonial-editable-field" data-field="avatar">DL</div>
-              <div class="featured-testimonial-info">
-                <h3 class="testimonial-editable-field" data-field="name">David Liu</h3>
-                <div class="position testimonial-editable-field" data-field="position">Startup Founder</div>
-                <div class="company testimonial-editable-field" data-field="company">InnovateLab</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="featured-testimonial-text testimonial-editable-field" data-field="text">
-              "This developer transformed our MVP into a production-ready application. Their expertise in modern web technologies 
-              and understanding of startup needs made them invaluable. They delivered on time, within budget, and the code quality 
-              was exceptional. We've since hired them for three additional projects."
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">MVP to Production Migration</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Scalable SaaS platform with real-time features</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Vue.js</span>
-              <span class="testimonial-tag">Python</span>
-              <span class="testimonial-tag">WebSockets</span>
-              <span class="testimonial-tag">Cloud Architecture</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">Project completed: October 2024</div>
-          </div>
-        </div>
-
-        <div class="client-categories">
-          <div class="client-category-card" data-testimonial-id="category-1">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('category-1')">Edit</button>
-            </div>
-            <span class="client-category-icon testimonial-editable-field" data-field="icon">🏢</span>
-            <h3 class="client-category-name testimonial-editable-field" data-field="name">Enterprise Clients</h3>
-            <p class="client-category-count testimonial-editable-field" data-field="count">15 Companies</p>
-          </div>
-          <div class="client-category-card" data-testimonial-id="category-2">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('category-2')">Edit</button>
-            </div>
-            <span class="client-category-icon testimonial-editable-field" data-field="icon">🚀</span>
-            <h3 class="client-category-name testimonial-editable-field" data-field="name">Startups</h3>
-            <p class="client-category-count testimonial-editable-field" data-field="count">22 Projects</p>
-          </div>
-          <div class="client-category-card" data-testimonial-id="category-3">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('category-3')">Edit</button>
-            </div>
-            <span class="client-category-icon testimonial-editable-field" data-field="icon">🎨</span>
-            <h3 class="client-category-name testimonial-editable-field" data-field="name">Creative Agencies</h3>
-            <p class="client-category-count testimonial-editable-field" data-field="count">8 Collaborations</p>
-          </div>
-          <div class="client-category-card" data-testimonial-id="category-4">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('category-4')">Edit</button>
-            </div>
-            <span class="client-category-icon testimonial-editable-field" data-field="icon">🏥</span>
-            <h3 class="client-category-name testimonial-editable-field" data-field="name">Healthcare</h3>
-            <p class="client-category-count testimonial-editable-field" data-field="count">5 Solutions</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Clients Tab -->
-      <div id="testimonials-clients" class="testimonials-tab-content">
-        <div class="testimonials-grid">
-          <div class="testimonial-showcase-card" data-testimonial-id="client-1">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('client-1')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">AB</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Alex Brown</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Product Manager</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">FinanceFlow Corp</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              The financial dashboard they built for us has revolutionized how we handle client data. 
-              The real-time analytics and intuitive interface have improved our team's productivity by 60%.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Financial Analytics Dashboard</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Real-time data visualization with advanced charting</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">React</span>
-              <span class="testimonial-tag">D3.js</span>
-              <span class="testimonial-tag">RESTful APIs</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">December 2024</div>
-          </div>
-          
-          <div class="testimonial-showcase-card" data-testimonial-id="client-2">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('client-2')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">MJ</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Maria Johnson</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Marketing Director</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">CreativeEdge Agency</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              Outstanding work on our client portfolio website. The animations and interactive elements perfectly 
-              captured our brand essence. Our client acquisition rate increased by 40% after the site launch.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Creative Portfolio Website</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Interactive showcase with custom animations</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">CSS Animations</span>
-              <span class="testimonial-tag">Three.js</span>
-              <span class="testimonial-tag">GSAP</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">November 2024</div>
-          </div>
-
-          <div class="testimonial-showcase-card" data-testimonial-id="client-3">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('client-3')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">RS</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Robert Smith</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">CEO</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">HealthTech Solutions</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              They developed a HIPAA-compliant patient management system that streamlined our operations. 
-              The security measures and user experience design were exactly what we needed for our healthcare practice.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Patient Management System</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">HIPAA-compliant healthcare application</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Healthcare</span>
-              <span class="testimonial-tag">Security</span>
-              <span class="testimonial-tag">Database Design</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">October 2024</div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Colleagues Tab -->
-      <div id="testimonials-colleagues" class="testimonials-tab-content">
-        <div class="testimonials-grid">
-          <div class="testimonial-showcase-card" data-testimonial-id="colleague-1">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('colleague-1')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">JD</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Jennifer Davis</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Senior Developer</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Tech Innovations Inc</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              Working alongside them on complex projects has been a privilege. Their problem-solving skills and 
-              ability to write clean, maintainable code make them an exceptional team member.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Enterprise Software Development</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Large-scale application architecture and development</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Team Collaboration</span>
-              <span class="testimonial-tag">Code Review</span>
-              <span class="testimonial-tag">Architecture</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">Ongoing collaboration</div>
-          </div>
-          
-          <div class="testimonial-showcase-card" data-testimonial-id="colleague-2">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('colleague-2')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">KW</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Kevin Wilson</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Tech Lead</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Digital Solutions Group</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              Their technical expertise and mentoring abilities have significantly improved our team's performance. 
-              They introduced modern development practices that increased our delivery speed by 35%.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Development Process Optimization</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">CI/CD implementation and team mentoring</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">DevOps</span>
-              <span class="testimonial-tag">Mentoring</span>
-              <span class="testimonial-tag">Process Improvement</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">2024 collaboration</div>
-          </div>
-
-          <div class="testimonial-showcase-card" data-testimonial-id="colleague-3">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('colleague-3')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">LT</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Lisa Thompson</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">UX Designer</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Creative Digital Studio</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              The collaboration between design and development was seamless. They perfectly translated our designs 
-              into functional, responsive interfaces while adding thoughtful improvements to the user experience.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Design-Development Collaboration</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Multiple client projects with pixel-perfect implementation</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Design Systems</span>
-              <span class="testimonial-tag">Responsive Design</span>
-              <span class="testimonial-tag">Cross-functional</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">Multiple projects 2024</div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Project Reviews Tab -->
-      <div id="testimonials-projects" class="testimonials-tab-content">
-        <div class="testimonials-grid">
-          <div class="testimonial-showcase-card" data-testimonial-id="project-1">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('project-1')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">PT</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Paul Thompson</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Project Manager</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Global Logistics Corp</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              The logistics tracking system they developed has transformed our operations. Real-time tracking, 
-              automated notifications, and detailed analytics have improved our efficiency tremendously.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Logistics Management Platform</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Real-time tracking with IoT integration</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">IoT</span>
-              <span class="testimonial-tag">Real-time Data</span>
-              <span class="testimonial-tag">GPS Integration</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">September 2024</div>
-          </div>
-          
-          <div class="testimonial-showcase-card" data-testimonial-id="project-2">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('project-2')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">EG</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Emily Garcia</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Operations Director</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">EduTech Platform</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              Our e-learning platform serves thousands of students daily thanks to their excellent development work. 
-              The video streaming, interactive quizzes, and progress tracking all work flawlessly.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">E-Learning Platform</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Interactive educational platform with video streaming</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Video Streaming</span>
-              <span class="testimonial-tag">Interactive UI</span>
-              <span class="testimonial-tag">Learning Management</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">August 2024</div>
-          </div>
-
-          <div class="testimonial-showcase-card" data-testimonial-id="project-3">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('project-3')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">CM</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Carlos Martinez</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Restaurant Owner</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Gourmet Bistro Chain</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              The restaurant management system revolutionized our operations. Online ordering, inventory management, 
-              and staff scheduling all integrated perfectly. Our revenue increased by 30% in the first quarter.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Restaurant Management System</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Complete POS and management solution</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">POS System</span>
-              <span class="testimonial-tag">Inventory</span>
-              <span class="testimonial-tag">Online Ordering</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">July 2024</div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Mentees Tab -->
-      <div id="testimonials-mentees" class="testimonials-tab-content">
-        <div class="testimonials-grid">
-          <div class="testimonial-showcase-card" data-testimonial-id="mentee-1">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('mentee-1')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">AS</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Anna Sharma</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Junior Developer</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Now at Microsoft</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              Their mentoring completely transformed my career. They taught me not just coding skills but also 
-              professional best practices, code review techniques, and how to think like a senior developer.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">6-Month Mentoring Program</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">From bootcamp graduate to Microsoft hire</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Career Development</span>
-              <span class="testimonial-tag">Technical Skills</span>
-              <span class="testimonial-tag">Interview Prep</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">Mentoring: Jan-Jun 2024</div>
-          </div>
-          
-          <div class="testimonial-showcase-card" data-testimonial-id="mentee-2">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('mentee-2')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">MK</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Mike Kim</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Career Changer</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Now Lead Developer</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              Transitioning from finance to tech seemed impossible until I found this mentor. Their guidance, 
-              patience, and structured learning approach helped me land a lead developer role within a year.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Career Transition Mentoring</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Finance professional to tech lead</div>
-            </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Career Change</span>
-              <span class="testimonial-tag">Full-Stack Training</span>
-              <span class="testimonial-tag">Leadership Skills</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">Mentoring: 2023-2024</div>
-          </div>
-
-          <div class="testimonial-showcase-card" data-testimonial-id="mentee-3">
-            <div class="testimonial-edit-controls">
-              <button class="testimonial-edit-btn" onclick="editTestimonial('mentee-3')">Edit</button>
-            </div>
-            <div class="testimonial-header">
-              <div class="testimonial-avatar testimonial-editable-field" data-field="avatar">SP</div>
-              <div class="testimonial-info">
-                <div class="testimonial-name testimonial-editable-field" data-field="name">Sofia Petrov</div>
-                <div class="testimonial-position testimonial-editable-field" data-field="position">Computer Science Student</div>
-                <div class="testimonial-company testimonial-editable-field" data-field="company">Now at Google</div>
-              </div>
-            </div>
-            <div class="testimonial-rating testimonial-editable-field" data-field="rating">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            <p class="testimonial-text testimonial-editable-field" data-field="text">
-              The real-world project experience and industry insights they provided were invaluable. 
-              Their mentoring helped me understand how to apply academic knowledge to practical solutions.
-            </p>
-            <div class="testimonial-project">
-              <div class="testimonial-project-title testimonial-editable-field" data-field="project-title">Student Mentoring Program</div>
-              <div class="testimonial-project-desc testimonial-editable-field" data-field="project-desc">Academic to industry transition support</div>
-              </div>
-            <div class="testimonial-tags testimonial-editable-field" data-field="tags">
-              <span class="testimonial-tag">Student Mentoring</span>
-              <span class="testimonial-tag">Industry Readiness</span>
-              <span class="testimonial-tag">Project Experience</span>
-            </div>
-            <div class="testimonial-date testimonial-editable-field" data-field="date">Mentoring: 2024</div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 </body>
