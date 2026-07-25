@@ -13870,14 +13870,14 @@ This message was sent from your portfolio contact form.`;
 
     // Initialize education interface when page loads
     document.addEventListener('DOMContentLoaded', function() {
-      initEducationInterface();
-      initAchievementsInterface();
-      initProjectsInterface();
-      initBlogInterface();
-      initTestimonialsInterface();
-      initHamburgerMenu();
-      initProfilePicture();
-      updateAdminStatus();
+      try { initEducationInterface(); } catch(e) { console.warn('initEducationInterface error:', e); }
+      try { initAchievementsInterface(); } catch(e) { console.warn('initAchievementsInterface error:', e); }
+      try { initProjectsInterface(); } catch(e) { console.warn('initProjectsInterface error:', e); }
+      try { initBlogInterface(); } catch(e) { console.warn('initBlogInterface error:', e); }
+      // initTestimonialsInterface not defined yet
+      try { initHamburgerMenu(); } catch(e) { console.warn('initHamburgerMenu error:', e); }
+      try { initProfilePicture(); } catch(e) { console.warn('initProfilePicture error:', e); }
+      try { updateAdminStatus(); } catch(e) { console.warn('updateAdminStatus error:', e); }
       
       // Load saved education data
       loadEducationDataFromStorage();
