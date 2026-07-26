@@ -1,0 +1,532 @@
+<div class="projects-interface-header">
+        <h1 class="projects-interface-title">Project Portfolio</h1>
+        <p class="projects-interface-subtitle">A comprehensive showcase of my technical projects and development work</p>
+      </div>
+
+      <div class="projects-tabs">
+        <button class="projects-tab active" onclick="switchProjectsTab('all')">All Projects</button>
+      </div>
+
+      <!-- All Projects Tab -->
+      <div class="projects-tab-content active" id="all">
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="ai">AI/ML</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="systems">Systems</button>
+          <button class="filter-btn" data-filter="graphics">Graphics</button>
+          <button class="filter-btn" data-filter="desktop">Desktop</button>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-showcase-card" data-category="web" data-project-id="all-1">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-1')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">✈️</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Full-Stack Web App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">FlyNova — Full-Stack Online Flight Ticket Booking System</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Full-stack flight-booking platform built with Java 17, Spring Boot, and MySQL. Features real-time flight search, seat selection, online check-in with boarding passes, role-based admin tools, an AI chatbot, and live flight data via the AviationStack API.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Java 17</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">AviationStack API</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="web" data-project-id="all-2">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-2')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🎥</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Full-Stack Web App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Online Exam Management System with Webcam Proctoring</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Full-stack online exam system built with React, Node.js/Express, and MySQL. Supports exam creation, webcam-monitored exam-taking, answer uploads, admin grading, and result review, with JWT authentication and role-based access.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">JWT</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="web" data-project-id="all-3">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-3')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🎮</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Browser Game</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">KidBattle (Brain Tug)</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Browser-based educational tug-of-war game for kids aged 3–10. Teams answer math and English questions to pull the rope, with 3 difficulty levels, customizable team names, and a 5-minute timer.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="ai" data-project-id="all-4">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-4')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🧭</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">AI / Machine Learning</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Feng Shui AI — Smart Urban Location Analysis System</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  AI-powered urban-analysis system combining traditional Feng Shui principles with machine learning. Uses a Random Forest model, AMap POI/road data, and HydroSHEDS river analysis to score locations on green space, water elements, Qi flow, and Yin-Yang balance, with actionable improvement suggestions.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Random Forest</span>
+                  <span class="tech-tag">AMap API</span>
+                  <span class="tech-tag">HydroSHEDS</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="ai" data-project-id="all-5">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-5')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🀄</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">AI / Education</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Mandarin Master</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  AI-based Chinese-learning platform covering the HSK 1–4 syllabus. Helps students learn vocabulary, grammar, and sentence structure through interactive AI-powered lessons and practice.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">TypeScript</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="ai" data-project-id="all-6">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-6')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">📚</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">AI / Education</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Taskademia</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  AI-powered smart learning media platform for organizing and delivering educational content.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="mobile" data-project-id="all-7">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-7')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🌍</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Mobile App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">GlobalTalk — Explore Cultures, Discover Food, Talk to the World</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Cross-platform Flutter + Node.js app for global food discovery and travel community. Connects users from 195 countries via real-time chat, an AI travel/food assistant, translation, and country communities — powered by MongoDB, Google Sign-In, and Maps.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Dart</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="mobile" data-project-id="all-8">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-8')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🍳</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Mobile App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">DailyFix — Bachelor Cooking Solution</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Mobile app that helps students and people living alone plan and cook simple meals on their own.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Dart</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="graphics" data-project-id="all-9">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-9')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">✨</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Computer Graphics</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">GPU Particle Simulation — Compute-Shader-Powered Particle Engine</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  High-performance OpenGL particle system simulating 2 million particles in real time using GPU compute shaders. Built with GLFW, GLEW, and GLM — features rainbow-spectrum coloring, additive blending, and a free-fly WASD/Arrow camera.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">OpenGL</span>
+                  <span class="tech-tag">GLFW</span>
+                  <span class="tech-tag">GLEW</span>
+                  <span class="tech-tag">GLM</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="graphics" data-project-id="all-10">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-10')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🕯️</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Computer Graphics</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Interactive 3D Candle with GPU-Based Fire Particle System</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Realistic OpenGL 3D candle simulation with a modeled candle stand and a GPU compute-shader-driven fire particle system. Features gravity, additive blending, a rotating emitter, keyboard-controlled flame intensity, and looping ambient sound.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">OpenGL</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="graphics" data-project-id="all-11">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-11')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🔺</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Computer Graphics</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">OpenGL Interactive Triangle Renderer with ImGui</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  OpenGL graphics app built with GLFW and GLEW that renders a colored triangle using custom vertex/fragment shaders, with a real-time ImGui control panel to adjust colors and monitor FPS.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">GLFW</span>
+                  <span class="tech-tag">GLEW</span>
+                  <span class="tech-tag">ImGui</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="systems" data-project-id="all-12">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-12')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🔢</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Networking / Systems</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">TCP Factorial Calculator — Multi-Client Client-Server App</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Java TCP client-server app where authenticated clients request factorial calculations (1–9). Features a multithreaded server handling multiple clients, server-side logging, response timing, and a calculator-style Swing GUI client with login.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">TCP Sockets</span>
+                  <span class="tech-tag">Multithreading</span>
+                  <span class="tech-tag">Swing</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="desktop" data-project-id="all-13">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-13')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">✊</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Desktop Game</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Rock-Paper-Scissors — Java Swing Multiplayer Game</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Java Swing desktop game with PvP and PvC modes. Players choose their move via keyboard (A/S/D and J/K/L) during a live countdown, with instant win/lose/draw results shown in dialog boxes, built using multithreading.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Swing</span>
+                  <span class="tech-tag">Multithreading</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="desktop" data-project-id="all-14">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-14')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🗂️</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Data Structures</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Hash Table Design & Implementation</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Custom hash table data structure implemented from first principles in C++ to study collision handling and performance trade-offs.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-showcase-card" data-category="desktop" data-project-id="all-15">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-15')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">⏰</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Desktop App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Aesthetic Digital Clock</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Visually striking Java Swing desktop clock featuring a giant outlined-year design, real-time date, simulated weather, IP-based location detection, and a customizable alarm with sound playback.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Swing</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

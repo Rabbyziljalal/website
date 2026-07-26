@@ -17124,660 +17124,19 @@ This message was sent from your portfolio contact form.`;
       </div>
       
       <div class="projects-tabs">
-        <button class="projects-tab active" onclick="switchProjectsTab('featured')">Featured Projects</button>
-        <button class="projects-tab" onclick="switchProjectsTab('web')">Web Development</button>
-        <button class="projects-tab" onclick="switchProjectsTab('ai')">AI & Machine Learning</button>
-        <button class="projects-tab" onclick="switchProjectsTab('mobile')">Mobile & Apps</button>
-        <button class="projects-tab" onclick="switchProjectsTab('all')">All Projects</button>
-      </div>
-      
-      <!-- Featured Projects Tab -->
-      <div class="projects-tab-content active" id="featured">
-        <div class="featured-projects">
-          <div class="featured-project-card" data-project-id="featured-1">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('featured-1')">✏️ Edit</button>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-              <div>
-                <div class="project-editable-field" data-field="category">
-                  <span class="project-showcase-category">Featured AI Project</span>
-                </div>
-                <div class="project-editable-field" data-field="title">
-                  <h3 class="project-showcase-title">Smart Healthcare Diagnosis System</h3>
-                </div>
-                <div class="project-editable-field" data-field="description">
-                  <p class="project-showcase-description">
-                    An advanced AI-powered healthcare diagnosis system that analyzes medical data and provides preliminary screening 
-                    with 94% accuracy. Built using TensorFlow and Python, this system has been tested with over 10,000 medical records.
-                  </p>
-                </div>
-                <div class="project-editable-field" data-field="tech-stack">
-                  <div class="project-tech-stack">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">Healthcare</span>
-                    <span class="tech-tag">Data Science</span>
-                  </div>
-                </div>
-                <div class="project-editable-field" data-field="links">
-                  <div class="project-links">
-                    <a href="#" class="project-link">🔗 View Project</a>
-                    <a href="#" class="project-link">📱 Live Demo</a>
-                    <a href="#" class="project-link">📄 Documentation</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-image">
-                <div class="project-image-placeholder">🏥</div>
-              </div>
-            </div>
-            <div class="project-stats">
-              <div class="project-stat" data-stat-id="featured-1-stat-1">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-1-stat-1')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">94%</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Accuracy</span>
-                </div>
-              </div>
-              <div class="project-stat" data-stat-id="featured-1-stat-2">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-1-stat-2')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">10K+</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Data Records</span>
-                </div>
-              </div>
-              <div class="project-stat" data-stat-id="featured-1-stat-3">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-1-stat-3')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">6</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Months</span>
-                </div>
-              </div>
-              <div class="project-stat" data-stat-id="featured-1-stat-4">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-1-stat-4')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">5</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Team Members</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="featured-project-card" data-project-id="featured-2">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('featured-2')">✏️ Edit</button>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-              <div class="project-image">
-                <div class="project-image-placeholder">🛒</div>
-              </div>
-              <div>
-                <div class="project-editable-field" data-field="category">
-                  <span class="project-showcase-category">Featured Web Project</span>
-                </div>
-                <div class="project-editable-field" data-field="title">
-                  <h3 class="project-showcase-title">Full-Scale E-commerce Platform</h3>
-                </div>
-                <div class="project-editable-field" data-field="description">
-                  <p class="project-showcase-description">
-                    A comprehensive e-commerce platform built with modern web technologies, handling 1000+ daily transactions 
-                    with 99.9% uptime. Features include secure payments, inventory management, and real-time analytics.
-                  </p>
-                </div>
-                <div class="project-editable-field" data-field="tech-stack">
-                  <div class="project-tech-stack">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">PayPal API</span>
-                  </div>
-                </div>
-                <div class="project-editable-field" data-field="links">
-                  <div class="project-links">
-                    <a href="#" class="project-link">🔗 View Project</a>
-                    <a href="#" class="project-link">🌐 Live Site</a>
-                    <a href="#" class="project-link">⚙️ Admin Panel</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="project-stats">
-              <div class="project-stat" data-stat-id="featured-2-stat-1">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-2-stat-1')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">1K+</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Daily Users</span>
-                </div>
-              </div>
-              <div class="project-stat" data-stat-id="featured-2-stat-2">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-2-stat-2')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">99.9%</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Uptime</span>
-                </div>
-              </div>
-              <div class="project-stat" data-stat-id="featured-2-stat-3">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-2-stat-3')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">4</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Months</span>
-                </div>
-              </div>
-              <div class="project-stat" data-stat-id="featured-2-stat-4">
-                <div class="project-stat-edit-controls">
-                  <button class="project-stat-edit-btn" onclick="editProjectStat('featured-2-stat-4')">✏️</button>
-                </div>
-                <div class="project-stat-editable-field" data-field="number">
-                  <span class="project-stat-number">$50K+</span>
-                </div>
-                <div class="project-stat-editable-field" data-field="label">
-                  <span class="project-stat-label">Revenue</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Web Development Tab -->
-      <div class="projects-tab-content" id="web">
-        <div class="projects-grid">
-          <div class="project-showcase-card" data-project-id="web-1">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('web-1')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">💼</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Web Development</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Portfolio Website</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  A modern, responsive portfolio website with advanced features including CAPTCHA security, 
-                  loading animations, and multi-language support.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">HTML5</span>
-                  <span class="tech-tag">CSS3</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Responsive Design</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🌐 Live Demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="web-2">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('web-2')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">📊</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Web Application</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Business Analytics Dashboard</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Real-time analytics dashboard for business intelligence with interactive charts, 
-                  data visualization, and export capabilities.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">D3.js</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Chart.js</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">📊 Live Dashboard</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="web-3">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('web-3')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">💬</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Real-time App</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Chat Application</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Real-time messaging application with features like group chats, file sharing, 
-                  emoji support, and user authentication.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Socket.io</span>
-                  <span class="tech-tag">Express</span>
-                  <span class="tech-tag">MongoDB</span>
-                  <span class="tech-tag">JWT</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">💬 Try Chat</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="web-4">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('web-4')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">🎵</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Entertainment</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Music Streaming Platform</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Full-featured music streaming platform with playlist management, 
-                  search functionality, and user recommendations.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Vue.js</span>
-                  <span class="tech-tag">Laravel</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Audio API</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🎵 Listen Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- AI & Machine Learning Tab -->
-      <div class="projects-tab-content" id="ai">
-        <div class="projects-grid">
-          <div class="project-showcase-card" data-project-id="ai-1">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('ai-1')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">🤖</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Machine Learning</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Image Classification System</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Deep learning model for image classification with 96% accuracy, 
-                  trained on custom dataset with data augmentation techniques.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">TensorFlow</span>
-                  <span class="tech-tag">OpenCV</span>
-                  <span class="tech-tag">Keras</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🔍 Try Model</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="ai-2">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('ai-2')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">📈</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Predictive Analytics</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Stock Price Predictor</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  LSTM-based neural network for stock price prediction with technical indicators 
-                  and sentiment analysis integration.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">LSTM</span>
-                  <span class="tech-tag">Pandas</span>
-                  <span class="tech-tag">Scikit-learn</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">📊 Predictions</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="ai-3">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('ai-3')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">🗣️</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">NLP</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Sentiment Analysis Tool</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Natural language processing tool for sentiment analysis of social media posts 
-                  and customer reviews with 92% accuracy.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">NLTK</span>
-                  <span class="tech-tag">spaCy</span>
-                  <span class="tech-tag">Transformers</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🔍 Analyze Text</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="ai-4">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('ai-4')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">🏠</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Regression</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Real Estate Price Predictor</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Machine learning model to predict real estate prices based on location, 
-                  size, amenities, and market trends.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">Random Forest</span>
-                  <span class="tech-tag">XGBoost</span>
-                  <span class="tech-tag">Feature Engineering</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🏠 Estimate Price</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Mobile & Apps Tab -->
-      <div class="projects-tab-content" id="mobile">
-        <div class="projects-grid">
-          <div class="project-showcase-card" data-project-id="mobile-1">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('mobile-1')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">📱</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Mobile App</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Learning Companion App</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Educational mobile app with gamification features, progress tracking, 
-                  and interactive learning modules. 5000+ downloads with 4.8/5 rating.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">React Native</span>
-                  <span class="tech-tag">Redux</span>
-                  <span class="tech-tag">Firebase</span>
-                  <span class="tech-tag">Gamification</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">📱 Download App</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="mobile-2">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('mobile-2')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">💰</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Finance App</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Personal Finance Tracker</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Comprehensive personal finance management app with expense tracking, 
-                  budget planning, and financial goal setting features.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Flutter</span>
-                  <span class="tech-tag">Dart</span>
-                  <span class="tech-tag">SQLite</span>
-                  <span class="tech-tag">Charts</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">💰 Try Demo</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="mobile-3">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('mobile-3')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">🏃</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Health & Fitness</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Fitness Tracker</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Health and fitness tracking application with workout plans, calorie counting, 
-                  and progress monitoring capabilities.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">React Native</span>
-                  <span class="tech-tag">Health Kit</span>
-                  <span class="tech-tag">GPS</span>
-                  <span class="tech-tag">Push Notifications</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🏃 Start Tracking</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-project-id="mobile-4">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('mobile-4')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">📝</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Productivity</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Task Management App</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Cross-platform task management application with team collaboration, 
-                  deadline tracking, and project organization features.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Ionic</span>
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">Firebase</span>
-                  <span class="tech-tag">Real-time Sync</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">📝 Manage Tasks</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button class="projects-tab active" onclick="switchProjectsTab('all')">All Projects</button>
       </div>
       
       <!-- All Projects Tab -->
-      <div class="projects-tab-content" id="all">
+      <div class="projects-tab-content active" id="all">
         <div class="projects-filter">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="web">Web</button>
           <button class="filter-btn" data-filter="ai">AI/ML</button>
           <button class="filter-btn" data-filter="mobile">Mobile</button>
-          <button class="filter-btn" data-filter="backend">Backend</button>
-          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="systems">Systems</button>
+          <button class="filter-btn" data-filter="graphics">Graphics</button>
+          <button class="filter-btn" data-filter="desktop">Desktop</button>
         </div>
         
         <div class="projects-grid">
@@ -17787,117 +17146,512 @@ This message was sent from your portfolio contact form.`;
               <button class="project-edit-btn" onclick="editProjectCard('all-1')">✏️ Edit</button>
             </div>
             <div class="project-image">
-              <div class="project-image-placeholder">🌐</div>
+              <div class="project-image-placeholder">✈️</div>
             </div>
             <div class="project-showcase-content">
               <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">Full Stack</span>
+                <span class="project-showcase-category">Full-Stack Web App</span>
               </div>
               <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Social Media Platform</h3>
+                <h3 class="project-showcase-title">FlyNova — Full-Stack Online Flight Ticket Booking System</h3>
               </div>
               <div class="project-editable-field" data-field="description">
                 <p class="project-showcase-description">
-                  Complete social media platform with user authentication, post sharing, 
-                  real-time messaging, and content moderation.
+                  Full-stack flight-booking platform built with Java 17, Spring Boot, and MySQL. Features real-time flight search, seat selection, online check-in with boarding passes, role-based admin tools, an AI chatbot, and live flight data via the AviationStack API.
                 </p>
               </div>
               <div class="project-editable-field" data-field="tech-stack">
                 <div class="project-tech-stack">
-                  <span class="tech-tag">MERN Stack</span>
-                  <span class="tech-tag">Socket.io</span>
-                  <span class="tech-tag">AWS</span>
-                  <span class="tech-tag">Redis</span>
+                  <span class="tech-tag">Java 17</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">AviationStack API</span>
                 </div>
               </div>
               <div class="project-editable-field" data-field="links">
                 <div class="project-links">
                   <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🌐 Visit Platform</a>
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="project-showcase-card" data-category="backend" data-project-id="all-2">
+          <div class="project-showcase-card" data-category="web" data-project-id="all-2">
             <div class="project-edit-controls">
               <button class="project-edit-btn" onclick="editProjectCard('all-2')">✏️ Edit</button>
             </div>
             <div class="project-image">
-              <div class="project-image-placeholder">⚙️</div>
+              <div class="project-image-placeholder">🎥</div>
             </div>
             <div class="project-showcase-content">
               <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">API Development</span>
+                <span class="project-showcase-category">Full-Stack Web App</span>
               </div>
               <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">RESTful API Service</h3>
+                <h3 class="project-showcase-title">Online Exam Management System with Webcam Proctoring</h3>
               </div>
               <div class="project-editable-field" data-field="description">
                 <p class="project-showcase-description">
-                  Scalable RESTful API service with authentication, rate limiting, 
-                  comprehensive documentation, and monitoring capabilities.
-                </p>
-              </div>
-              <div class="project-editable-field" data-field="tech-stack">
-                <div class="project-tech-stack">
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Express</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">Swagger</span>
-                </div>
-              </div>
-              <div class="project-editable-field" data-field="links">
-                <div class="project-links">
-                  <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">📚 API Docs</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="project-showcase-card" data-category="frontend" data-project-id="all-3">
-            <div class="project-edit-controls">
-              <button class="project-edit-btn" onclick="editProjectCard('all-3')">✏️ Edit</button>
-            </div>
-            <div class="project-image">
-              <div class="project-image-placeholder">🎨</div>
-            </div>
-            <div class="project-showcase-content">
-              <div class="project-editable-field" data-field="category">
-                <span class="project-showcase-category">UI/UX</span>
-              </div>
-              <div class="project-editable-field" data-field="title">
-                <h3 class="project-showcase-title">Design System</h3>
-              </div>
-              <div class="project-editable-field" data-field="description">
-                <p class="project-showcase-description">
-                  Comprehensive design system with reusable components, style guides, 
-                  and documentation for consistent user interface development.
+                  Full-stack online exam system built with React, Node.js/Express, and MySQL. Supports exam creation, webcam-monitored exam-taking, answer uploads, admin grading, and result review, with JWT authentication and role-based access.
                 </p>
               </div>
               <div class="project-editable-field" data-field="tech-stack">
                 <div class="project-tech-stack">
                   <span class="tech-tag">React</span>
-                  <span class="tech-tag">Storybook</span>
-                  <span class="tech-tag">SCSS</span>
-                  <span class="tech-tag">Figma</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">JWT</span>
                 </div>
               </div>
               <div class="project-editable-field" data-field="links">
                 <div class="project-links">
                   <a href="#" class="project-link">🔗 View Code</a>
-                  <a href="#" class="project-link">🎨 Component Library</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="web" data-project-id="all-3">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-3')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🎮</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Browser Game</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">KidBattle (Brain Tug)</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Browser-based educational tug-of-war game for kids aged 3–10. Teams answer math and English questions to pull the rope, with 3 difficulty levels, customizable team names, and a 5-minute timer.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="ai" data-project-id="all-4">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-4')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🧭</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">AI / Machine Learning</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Feng Shui AI — Smart Urban Location Analysis System</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  AI-powered urban-analysis system combining traditional Feng Shui principles with machine learning. Uses a Random Forest model, AMap POI/road data, and HydroSHEDS river analysis to score locations on green space, water elements, Qi flow, and Yin-Yang balance, with actionable improvement suggestions.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Random Forest</span>
+                  <span class="tech-tag">AMap API</span>
+                  <span class="tech-tag">HydroSHEDS</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="ai" data-project-id="all-5">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-5')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🀄</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">AI / Education</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Mandarin Master</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  AI-based Chinese-learning platform covering the HSK 1–4 syllabus. Helps students learn vocabulary, grammar, and sentence structure through interactive AI-powered lessons and practice.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">TypeScript</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="ai" data-project-id="all-6">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-6')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">📚</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">AI / Education</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Taskademia</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  AI-powered smart learning media platform for organizing and delivering educational content.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="mobile" data-project-id="all-7">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-7')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🌍</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Mobile App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">GlobalTalk — Explore Cultures, Discover Food, Talk to the World</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Cross-platform Flutter + Node.js app for global food discovery and travel community. Connects users from 195 countries via real-time chat, an AI travel/food assistant, translation, and country communities — powered by MongoDB, Google Sign-In, and Maps.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Dart</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="mobile" data-project-id="all-8">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-8')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🍳</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Mobile App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">DailyFix — Bachelor Cooking Solution</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Mobile app that helps students and people living alone plan and cook simple meals on their own.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Dart</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="graphics" data-project-id="all-9">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-9')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">✨</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Computer Graphics</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">GPU Particle Simulation — Compute-Shader-Powered Particle Engine</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  High-performance OpenGL particle system simulating 2 million particles in real time using GPU compute shaders. Built with GLFW, GLEW, and GLM — features rainbow-spectrum coloring, additive blending, and a free-fly WASD/Arrow camera.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">OpenGL</span>
+                  <span class="tech-tag">GLFW</span>
+                  <span class="tech-tag">GLEW</span>
+                  <span class="tech-tag">GLM</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="graphics" data-project-id="all-10">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-10')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🕯️</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Computer Graphics</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Interactive 3D Candle with GPU-Based Fire Particle System</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Realistic OpenGL 3D candle simulation with a modeled candle stand and a GPU compute-shader-driven fire particle system. Features gravity, additive blending, a rotating emitter, keyboard-controlled flame intensity, and looping ambient sound.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">OpenGL</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="graphics" data-project-id="all-11">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-11')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🔺</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Computer Graphics</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">OpenGL Interactive Triangle Renderer with ImGui</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  OpenGL graphics app built with GLFW and GLEW that renders a colored triangle using custom vertex/fragment shaders, with a real-time ImGui control panel to adjust colors and monitor FPS.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">GLFW</span>
+                  <span class="tech-tag">GLEW</span>
+                  <span class="tech-tag">ImGui</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="systems" data-project-id="all-12">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-12')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🔢</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Networking / Systems</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">TCP Factorial Calculator — Multi-Client Client-Server App</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Java TCP client-server app where authenticated clients request factorial calculations (1–9). Features a multithreaded server handling multiple clients, server-side logging, response timing, and a calculator-style Swing GUI client with login.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">TCP Sockets</span>
+                  <span class="tech-tag">Multithreading</span>
+                  <span class="tech-tag">Swing</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="desktop" data-project-id="all-13">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-13')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">✊</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Desktop Game</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Rock-Paper-Scissors — Java Swing Multiplayer Game</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Java Swing desktop game with PvP and PvC modes. Players choose their move via keyboard (A/S/D and J/K/L) during a live countdown, with instant win/lose/draw results shown in dialog boxes, built using multithreading.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Swing</span>
+                  <span class="tech-tag">Multithreading</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="desktop" data-project-id="all-14">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-14')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">🗂️</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Data Structures</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Hash Table Design & Implementation</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Custom hash table data structure implemented from first principles in C++ to study collision handling and performance trade-offs.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">C++</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-showcase-card" data-category="desktop" data-project-id="all-15">
+            <div class="project-edit-controls">
+              <button class="project-edit-btn" onclick="editProjectCard('all-15')">✏️ Edit</button>
+            </div>
+            <div class="project-image">
+              <div class="project-image-placeholder">⏰</div>
+            </div>
+            <div class="project-showcase-content">
+              <div class="project-editable-field" data-field="category">
+                <span class="project-showcase-category">Desktop App</span>
+              </div>
+              <div class="project-editable-field" data-field="title">
+                <h3 class="project-showcase-title">Aesthetic Digital Clock</h3>
+              </div>
+              <div class="project-editable-field" data-field="description">
+                <p class="project-showcase-description">
+                  Visually striking Java Swing desktop clock featuring a giant outlined-year design, real-time date, simulated weather, IP-based location detection, and a customizable alarm with sound playback.
+                </p>
+              </div>
+              <div class="project-editable-field" data-field="tech-stack">
+                <div class="project-tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Swing</span>
+                </div>
+              </div>
+              <div class="project-editable-field" data-field="links">
+                <div class="project-links">
+                  <a href="#" class="project-link">🔗 View Code</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Comprehensive Blog Interface -->
+        <!-- Comprehensive Blog Interface -->
   <div class="blog-interface" id="blogInterface">
     <div class="blog-interface-content">
       <button class="blog-close-btn" onclick="closeBlogInterface()">&times;</button>
